@@ -4,12 +4,14 @@ using namespace std;
 
 int main()
 {
-    int x, y;
-    char opcode, againCondition;
+    signed int x, y;
+    signed long long result;
+    unsigned char opcode, againCondition;
 
     while (1)
     {
-        cout << "Enter the Operation and the Operands [ex: x+y] : ";
+        result = 1;
+        cout << "Enter the Operation and the Operands [ex  : x+y] : ";
         cin >> x >> opcode >> y;
 
         switch (opcode)
@@ -28,6 +30,14 @@ int main()
                 cout << "The result : " << x / y << endl;
             else
                 cout << "Division by zero is not possible !!!" << endl;
+            break;
+        case '^':
+            while (y)
+            {
+                result *= x;
+                y--;
+            }
+            cout << "The result : " << result << endl;
             break;
         default:
             cout << "Wrong Entery !!!";
