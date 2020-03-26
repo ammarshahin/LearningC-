@@ -9,7 +9,7 @@ int main()
 
     while (1)
     {
-        cout << "Enter the Operation and the Operands [ex: x+y] : " << endl;
+        cout << "Enter the Operation and the Operands [ex: x+y] : ";
         cin >> x >> opcode >> y;
 
         switch (opcode)
@@ -32,13 +32,13 @@ int main()
         default:
             cout << "Wrong Entery !!!";
         }
-        
+
         cout << "Again ? [y or n] : ";
         cin >> againCondition;
 
         if (againCondition == 'y' || againCondition == 'Y')
             continue;
-        else 
+        else
             break;
     }
 
