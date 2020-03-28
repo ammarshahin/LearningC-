@@ -62,5 +62,8 @@ int main()
         cout << "\nPhone number: " << companyMembers[index].contact;
         fwrite(&companyMembers[index], sizeof(Person), 1, fp);
     }
+
+    fclose(fp);
+
     return 0u;
 }
