@@ -3,6 +3,7 @@
  * *************************************************************/
 #include <iostream>
 #include <string>
+#include <stdio.h>
 
 using namespace std;
 
@@ -34,6 +35,8 @@ typedef struct
  * *************************************************************/
 int main()
 {
+    FILE *fp = fopen("E:\\Engennering\\CS\\programing\\C++\\LearningC++ Repo\\CompanyInfo.txt", "w");
+
     Person companyMembers[MY_COMPANY_SIZE];
     cout << "Enter the Company info one By one: " << endl;
     for (int index = 0; index < MY_COMPANY_SIZE; index++)
@@ -57,6 +60,7 @@ int main()
         cout << "\nID: : " << companyMembers[index].id;
         cout << "\nAge: " << companyMembers[index].age;
         cout << "\nPhone number: " << companyMembers[index].contact;
+        fwrite(&companyMembers[index], sizeof(Person), 1, fp);
     }
     return 0u;
 }
