@@ -1,2 +1,2 @@
 # LearningCpp
-This repo  is for Learning the C++ syntax
+This repo  is for Learning the C++ and OOP

@@ -38,7 +38,7 @@ printStartMsg:
 app: $(OBJ)
 	$(CC) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
-git:
+git:                      # This rule is to automate aquick save to the VCS git 
 	@echo -------------Quick Saving...-------------
 	git add .
 	git commit -a -m "Quick Save" 

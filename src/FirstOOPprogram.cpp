@@ -1,25 +1,37 @@
 #include <iostream>
 
+using namespace std;
 class Rect
 {
 public:
     uint32_t l, w;
-
-public:
-    uint64_t rectArea()
+    uint64_t area()
     {
         return (uint64_t)l * w;
     }
 };
 
-using namespace std;
+class Circle
+{
+public:
+    uint32_t r;
+    const float PI = 3.1415;
+    uint64_t area()
+    {
+        return (uint64_t)PI * r * r;
+    }
+};
 
 int main()
 {
-    Rect r1;
-    r1.l = 10;
-    r1.w = 20;
-    uint64_t area = r1.rectArea();
-    cout << "area = " << area << endl;
+    Rect r;
+    r.l = 10;
+    r.w = 20;
+    cout << "Rectangle area = " << r.area() << endl;
+
+    Circle c;
+    c.r = 10;
+    cout << "Circle area = " << c.area() << endl;
+
     return 0;
 }
