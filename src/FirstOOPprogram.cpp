@@ -20,6 +20,16 @@ public:
         return (uint64_t)l * w;
     }
 
+    void ChangeLegnth(uint32_t l)
+    {
+        this->l = l;
+    }
+
+    void ChangeWidth(uint32_t w)
+    {
+        this->w = w;
+    }
+
     /* The Object(Class) Destructor */
     ~Rect() {}
 };
@@ -32,7 +42,7 @@ class Circle
 
 public:
     /* The Object(Class) Constructor */
-    Circle(){}
+    Circle() {} // Empty Constructor
 
     Circle(double r)
     {
@@ -45,6 +55,11 @@ public:
         return (double)PI * r * r;
     }
 
+    void ChangeRadius(double r)
+    {
+        this->r = r;
+    }
+
     /* The Object(Class) Destructor */
     ~Circle() {}
 };
@@ -53,9 +68,14 @@ int main()
 {
     Rect r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
+    r.ChangeLegnth(30);
+    r.ChangeWidth(40);
+    cout << "Rectangle area = " << r.area() << endl;
 
-    Circle c;
+    Circle c(10);
     cout << "Circle area = " << c.area() << endl;
+    c.ChangeRadius(100);
+    cout << "Rectangle area = " << c.area() << endl;
 
     return 0;
 }
