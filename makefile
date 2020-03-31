@@ -27,13 +27,13 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 all: git clean printStartMsg app
 	
 printStartMsg: 
-	@echo Building...
+	@echo -------------Building...-------------
 
 app: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 git:
-	@echo Quick Saving
+	@echo -------------Quick Saving...-------------
 	git add .
 	git commit -a -m "Quick Save" 
 
@@ -43,5 +43,5 @@ $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
 .PHONY: clean
 
 clean:
-	@echo Cleaning...
+	@echo -------------Cleaning...-------------
 	del *.exe $(ODIR).\*.o
