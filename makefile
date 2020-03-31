@@ -25,7 +25,7 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: git clean printStartMsg app running sizeOfProg
+all: git clean printStartMsg app running
 	
 sizeOfProg: 
 	@echo -------------Final Statics: -------------
