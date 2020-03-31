@@ -4,23 +4,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "g++ Build",
             "type": "shell",
-            "command": "msbuild",
+            "command": "g++",
             "args": [
-                // Ask msbuild to generate full paths for file names.
-                "/property:GenerateFullPaths=true",
-                "/t:build",
-                // Do not generate summary otherwise it leads to duplicate errors in Problems panel
-                "/consoleloggerparameters:NoSummary"
+                "-g",
+                "src\\HelloProgram.c++",
+                "-o",
+                "app.exe"
             ],
             "group": "build",
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
-            // Use the standard MS compiler pattern to detect errors, warnings and infos
-            "problemMatcher": "$msCompile"
         }
     ]
 }

@@ -11,6 +11,7 @@ _EXC  = app.exe
  
 CC = g++
 CXXFLAGS = -I$(IDIR) -Wall
+CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj

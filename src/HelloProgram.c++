@@ -5,7 +5,9 @@ using namespace std;
 
 int main()
 {
-    uint8_t x =80;
+    int x = 5;
+    x++;
+    x++;
     cout << "This is My first program in C++ ^_^ ! " << endl;
     return 0;
 }
