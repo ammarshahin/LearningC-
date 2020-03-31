@@ -10,7 +10,7 @@ _EXC  = app.exe
 #################################################################################
  
 CC = g++
-CFLAGS = -I$(IDIR)
+CXXFLAGS = -I$(IDIR) -Wall
 
 IDIR = .\inc
 ODIR = .\obj
@@ -27,14 +27,15 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 #******************************* Rules *******************************
 all: git clean printStartMsg app running
 	
-sizeOfProg: 
-	@echo -------------Final Statics: -------------
+size:                   #rule to git stastics og the program
+	@echo -------------Program Statics: -------------
 	size $(_EXC)
+
 printStartMsg: 
 	@echo -------------Building...-------------
 
 app: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+	$(CC) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 git:
 	@echo -------------Quick Saving...-------------
@@ -46,7 +47,7 @@ running:
 	@$(_EXC)
 
 $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CXXFLAGS)
 
 .PHONY: clean
 
