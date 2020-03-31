@@ -13,12 +13,14 @@ public:
 
 class Circle
 {
-public:
-    uint32_t r;
+private:
     const float PI = 3.1415;
-    uint64_t area()
+
+public:
+    double r;
+    double area()
     {
-        return (uint64_t)PI * r * r;
+        return (double)PI * r * r;
     }
 };
 
