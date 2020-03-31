@@ -9,7 +9,7 @@ _OBJ  = FirstOOPprogram.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
-CC = g++
+CXXC = g++
 CXXFLAGS = -I$(IDIR) -Wall
 CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
@@ -36,7 +36,7 @@ printStartMsg:
 	@echo -------------Building...-------------
 
 app: $(OBJ)
-	$(CC) -o $@ $^ $(CXXFLAGS) $(LIBS)
+	$(CXXC) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 git:                      # This rule is to automate aquick save to the VCS git 
 	@echo -------------Quick Saving...-------------
@@ -48,7 +48,7 @@ running:
 	@$(_EXC)
 
 $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
-	$(CC) -c -o $@ $< $(CXXFLAGS)
+	$(CXXC) -c -o $@ $< $(CXXFLAGS)
 
 .PHONY: clean
 
