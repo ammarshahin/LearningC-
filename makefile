@@ -12,10 +12,10 @@ _OBJ  = HelloProgram.o
 CC = g++
 CFLAGS = -I$(IDIR)
 
-IDIR = ./inc
-ODIR = ./obj
-LDIR = ./lib
-SDIR = ./src
+IDIR = .\inc
+ODIR = .\obj
+LDIR = .\lib
+SDIR = .\src
 
 LIBS = -lm
 
@@ -43,4 +43,4 @@ $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
 
 clean:
 	@echo Start Cleaning
-	del -f $(ODIR)/*.o *~ core $(IDIR)/*~
+	del *.exe $(ODIR).\*.o *~ core $(IDIR).\*~
