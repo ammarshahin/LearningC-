@@ -3,9 +3,10 @@
 using namespace std;
 class Rect
 {
-public:
     uint32_t l, w;
-    Rect(uint32_t ll, uint32_t ww)
+
+public:
+    Rect(uint32_t ll, uint32_t ww) // The Object(Class) Constructor
     {
         l = ll;
         w = ww;
@@ -18,13 +19,11 @@ public:
 
 class Circle
 {
-private:
     const float PI = 3.1415;
-
-public:
     double r;
 
-    Circle(double rr)
+public:
+    Circle(double rr) // The Object(Class) Constructor
     {
         r = rr;
     }
@@ -40,7 +39,7 @@ int main()
     Rect r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
 
-    Circle c(20);
+    Circle c(10);
     cout << "Circle area = " << c.area() << endl;
 
     return 0;
