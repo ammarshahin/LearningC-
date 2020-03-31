@@ -20,12 +20,12 @@ public:
         return (uint64_t)l * w;
     }
 
-    void ChangeLegnth(uint32_t l)
+    void changeLegnth(uint32_t l)
     {
         this->l = l;
     }
 
-    void ChangeWidth(uint32_t w)
+    void changeWidth(uint32_t w)
     {
         this->w = w;
     }
@@ -55,7 +55,7 @@ public:
         return (double)PI * r * r;
     }
 
-    void ChangeRadius(double r)
+    void changeRadius(double r)
     {
         this->r = r;
     }
@@ -68,13 +68,13 @@ int main()
 {
     Rect r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
-    r.ChangeLegnth(30);
-    r.ChangeWidth(40);
+    r.changeLegnth(30);
+    r.changeWidth(40);
     cout << "Rectangle area = " << r.area() << endl;
 
     Circle c(10);
     cout << "Circle area = " << c.area() << endl;
-    c.ChangeRadius(100);
+    c.changeRadius(100);
     cout << "Rectangle area = " << c.area() << endl;
 
     return 0;
