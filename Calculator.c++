@@ -40,7 +40,7 @@ int main()
             cout << "The result : " << result << endl;
             break;
         default:
-            cout << "Wrong Entery !!!";
+            cout << "Wrong Entry !!!";
         }
 
         cout << "Again ? [y or n] : ";

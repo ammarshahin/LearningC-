@@ -35,7 +35,7 @@ typedef struct
  * *************************************************************/
 int main()
 {
-    FILE *fp = fopen("E:\\Engennering\\CS\\programing\\C++\\LearningC++ Repo\\CompanyInfo.txt", "w");
+    FILE *fp = fopen("E:\\CS\\programing\\C++\\LearningC++ Repo\\CompanyInfo.txt", "w");
 
     Person companyMembers[MY_COMPANY_SIZE];
     cout << "Enter the Company info one By one: " << endl;
