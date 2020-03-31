@@ -5,7 +5,7 @@
 
 ######### change The File Names here ########
 _DEPS =                           #The includes[.h and .hpp]
-_OBJ  = HelloProgram.o
+_OBJ  = FirstOOPprogram.o
 _EXC  = app.exe   
 #################################################################################
  
