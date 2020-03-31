@@ -3,35 +3,48 @@
 using namespace std;
 class Rect
 {
+    /* The Object(Class) Data */
     uint32_t l, w;
 
 public:
-    Rect(uint32_t ll, uint32_t ww) // The Object(Class) Constructor
+    /* The Object(Class) Constructor */
+    Rect(uint32_t l, uint32_t w)
     {
-        l = ll;
-        w = ww;
+        this.l = l;
+        this.w = w;
     }
+
+    /* The Object(Class) Methods */
     uint64_t area()
     {
         return (uint64_t)l * w;
     }
+
+    /* The Object(Class) Destructor */
+    ~Rect() {}
 };
 
 class Circle
 {
+    /* The Object(Class) Data */
     const float PI = 3.1415;
     double r;
 
 public:
-    Circle(double rr) // The Object(Class) Constructor
+    /* The Object(Class) Constructor */
+    Circle(double r)
     {
-        r = rr;
+        this.r = r;
     }
 
+    /* The Object(Class) Methods */
     double area()
     {
         return (double)PI * r * r;
     }
+
+    /* The Object(Class) Destructor */
+    ~Circle() {}
 };
 
 int main()
