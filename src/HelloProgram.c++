@@ -1,6 +1,6 @@
 #include <iostream>
 
-int x = 5;
+int16_t x;
 using namespace std;
 
 int main()
