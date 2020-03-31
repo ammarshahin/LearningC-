@@ -5,7 +5,8 @@
 
 ######### change The File Names here ########
 _DEPS =                           #The includes[.h and .hpp]
-_OBJ  = HelloProgram.o         
+_OBJ  = HelloProgram.o
+_EXC  = app.exe        
 ##############################
  
 CC = g++
@@ -39,7 +40,7 @@ git:
 
 running:
 	@echo -------------running...-------------
-	*.exe
+	@$(_EXC)
 
 $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
