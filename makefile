@@ -1,14 +1,46 @@
-all: Build
+# Author: Ammar Shahin
+# Date:   31/3/2020
 
-Build:
-	@echo Start Compiling
-	g++ HelloProgram.c++ -o app.exe
 
+############################### Variables #######################################
+
+######### change here ########
+_DEPS = 
+_OBJ  = HelloProgram.o         
+##############################
+ 
+CC = g++
+CFLAGS = -I$(IDIR)
+
+IDIR = ./inc
+ODIR = ./obj
+LDIR = ./lib
+SDIR = ./src
+
+LIBS = -lm
+
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+
+#******************************* Rules *******************************
+all: app
+
+app: $(OBJ)
+	@echo Start Building...
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 git:
+	@echo Quick Saving
 	git add .
-	git commit -a -m "Quick Save"
+	git commit -a -m "Quick Save" 
 
-clean: 
+$(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+.PHONY: clean
+
+clean:
 	@echo Start Cleaning
-	del *.exe
+	del -f $(ODIR)/*.o *~ core $(IDIR)/*~
