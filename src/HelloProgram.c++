@@ -1,5 +1,6 @@
 #include <iostream>
 
+int x = 5;
 using namespace std;
 
 int main()
