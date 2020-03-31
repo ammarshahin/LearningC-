@@ -1,11 +1,10 @@
 # Author: Ammar Shahin
 # Date:   31/3/2020
 
-
 ############################### Variables #######################################
 
-######### change here ########
-_DEPS = 
+######### change The File Names here ########
+_DEPS =                           #The includes[.h and .hpp]
 _OBJ  = HelloProgram.o         
 ##############################
  
@@ -25,10 +24,12 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: app
+all: git clean printStartMsg app
+	
+printStartMsg: 
+	@echo Building...
 
 app: $(OBJ)
-	@echo Start Building...
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 git:
@@ -42,5 +43,5 @@ $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
 .PHONY: clean
 
 clean:
-	@echo Start Cleaning
-	del *.exe $(ODIR).\*.o *~ core $(IDIR).\*~
+	@echo Cleaning...
+	del *.exe $(ODIR).\*.o
