@@ -37,8 +37,9 @@ git:
 	git add .
 	git commit -a -m "Quick Save" 
 
-running: 
-	.\*exe
+running:
+	@echo -------------running...-------------
+	.\*.exe
 
 $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
