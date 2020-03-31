@@ -47,7 +47,7 @@ running:
 	@echo -------------running...-------------
 	@$(_EXC)
 
-$(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
+$(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CXXFLAGS)
 
 .PHONY: clean
