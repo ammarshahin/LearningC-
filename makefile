@@ -24,7 +24,7 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: git clean printStartMsg app
+all: git clean printStartMsg app running
 	
 printStartMsg: 
 	@echo -------------Building...-------------
@@ -36,6 +36,9 @@ git:
 	@echo -------------Quick Saving...-------------
 	git add .
 	git commit -a -m "Quick Save" 
+
+running: 
+	.\*exe
 
 $(ODIR)/%.o: $(SDIR)/%.c++ $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
