@@ -10,8 +10,8 @@ public:
     /* The Object(Class) Constructor */
     Rect(uint32_t l, uint32_t w)
     {
-        this.l = l;
-        this.w = w;
+        this->l = l;
+        this->w = w;
     }
 
     /* The Object(Class) Methods */
@@ -34,7 +34,7 @@ public:
     /* The Object(Class) Constructor */
     Circle(double r)
     {
-        this.r = r;
+        this->r = r;
     }
 
     /* The Object(Class) Methods */
