@@ -40,7 +40,7 @@ int main()
     Rect r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
 
-    Circle c(10);
+    Circle c(20);
     cout << "Circle area = " << c.area() << endl;
 
     return 0;
