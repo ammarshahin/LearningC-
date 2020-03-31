@@ -5,6 +5,11 @@ class Rect
 {
 public:
     uint32_t l, w;
+    Rect(uint32_t ll, uint32_t ww)
+    {
+        l = ll;
+        w = ww;
+    }
     uint64_t area()
     {
         return (uint64_t)l * w;
@@ -18,6 +23,12 @@ private:
 
 public:
     double r;
+
+    Circle(double rr)
+    {
+        r = rr;
+    }
+
     double area()
     {
         return (double)PI * r * r;
@@ -26,13 +37,10 @@ public:
 
 int main()
 {
-    Rect r;
-    r.l = 10;
-    r.w = 20;
+    Rect r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
 
-    Circle c;
-    c.r = 10;
+    Circle c(10);
     cout << "Circle area = " << c.area() << endl;
 
     return 0;
