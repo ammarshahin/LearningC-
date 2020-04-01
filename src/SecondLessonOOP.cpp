@@ -3,14 +3,13 @@
 #include <iostream>
 //#include "../inc./classes.hpp"
 
-
 #include <iostream>
 
 class Rect
 {
     /* The Object(Class) Data */
     uint32_t l, w;
-    static uint8_t rectCount;
+    uint8_t rectCount;
 
 public:
     /* The Object(Class) Constructors */
