@@ -35,6 +35,16 @@ public:
         this->w = w;
     }
 
+    uint32_t legnth()
+    {
+        return this->l;
+    }
+
+    uint32_t width()
+    {
+        return this->w;
+    }
+
     Rect operator+(Rect x)
     {
         Rect temp;
@@ -52,6 +62,8 @@ int main()
     Rect r1(10, 20), r2(20, 10), r3;
     r3 = r1 + r2;
 
+    cout << "Rectangle Length = " << r3.legnth() << endl;
+    cout << "Rectangle Width = " << r3.width() << endl;
     cout << "Rectangle area = " << r3.area() << endl;
 
     return 0;
