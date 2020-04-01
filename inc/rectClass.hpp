@@ -3,22 +3,22 @@
 
 #include <iostream>
 
-class Rect
+class rectClass
 {
     /* The Object(Class) Data */
     uint32_t l, w;
-    static int rectCount;
+    static uint32_t rectCount;
 
 public:
     /* The Object(Class) Constructors */
-    Rect() // Empty Constructor
+    rectClass() // Empty Constructor
     {
         this->l = 0;
         this->w = 0;
         this->rectCount++;
     }
 
-    Rect(uint32_t l, uint32_t w)
+    rectClass(uint32_t l, uint32_t w)
     {
         this->l = l;
         this->w = w;
@@ -51,23 +51,23 @@ public:
         return this->w;
     }
 
-    Rect operator+(Rect x)
+    rectClass operator+(rectClass x)
     {
-        Rect temp;
+        rectClass temp;
         temp.l = this->l + x.l;
         temp.w = this->w + x.w;
         return temp;
     }
 
-    int rectCounter()
+    uint32_t rectCounter()
     {
         return this->rectCount;
     }
 
     /* The Object(Class) Destructor */
-    ~Rect() {}
+    ~rectClass() {}
 };
 
-int Rect::rectCount = 0;
+uint32_t rectClass::rectCount = 0;
 
 #endif /* __CLASSES__HPP__ */
