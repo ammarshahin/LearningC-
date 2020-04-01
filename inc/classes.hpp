@@ -7,7 +7,7 @@ class Rect
 {
     /* The Object(Class) Data */
     uint32_t l, w;
-    static uint32_t rectCount;
+    static int rectCount;
 
 public:
     /* The Object(Class) Constructors */
@@ -59,7 +59,7 @@ public:
         return temp;
     }
 
-    uint32_t rectCounter()
+    int rectCounter()
     {
         return this->rectCount;
     }
@@ -68,6 +68,6 @@ public:
     ~Rect() {}
 };
 
-uint32_t Rect::rectCount = 0;
+int Rect::rectCount = 0;
 
 #endif /* __CLASSES__HPP__ */
