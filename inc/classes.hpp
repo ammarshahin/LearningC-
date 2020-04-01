@@ -7,7 +7,7 @@ class Rect
 {
     /* The Object(Class) Data */
     uint32_t l, w;
-    static uint32_t rectCount = 0;
+    static uint32_t rectCount;
 
 public:
     /* The Object(Class) Constructors */
