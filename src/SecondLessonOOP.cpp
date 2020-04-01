@@ -9,7 +9,7 @@ class Rect
 {
     /* The Object(Class) Data */
     uint32_t l, w;
-    uint8_t rectCount;
+    static uint8_t rectCount;
 
 public:
     /* The Object(Class) Constructors */
@@ -17,14 +17,14 @@ public:
     {
         this->l = 0;
         this->w = 0;
-        this->rectCount = 5;
+        this->rectCount++;
     }
 
     Rect(uint32_t l, uint32_t w)
     {
         this->l = l;
         this->w = w;
-        this->rectCount = 5;
+        this->rectCount++;
     }
 
     /* The Object(Class) Methods */
