@@ -27,7 +27,7 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: git clean printStartMsg app running
+all: git clean printStartMsg app run
 	
 size:                   #rule to git stastics og the program
 	@echo -------------Program Statics: -------------
@@ -44,7 +44,7 @@ git:                      # This rule is to automate aquick save to the VCS git
 	git add .
 	git commit -a -m "Quick Save" 
 
-running:
+run:
 	@echo -------------running...-------------
 	@$(_EXC)
 
