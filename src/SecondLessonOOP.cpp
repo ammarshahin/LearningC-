@@ -13,6 +13,7 @@ int main()
     cout << "Rectangle Length = " << r3.legnth() << endl;
     cout << "Rectangle Width = " << r3.width() << endl;
     cout << "Rectangle area = " << r3.area() << endl;
+    cout << "The Number of created rects = " << r3.rectCounter() << endl;
 
     return 0;
 }
