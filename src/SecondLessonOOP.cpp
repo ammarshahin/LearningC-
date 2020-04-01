@@ -61,7 +61,7 @@ public:
         return temp;
     }
 
-    uint8_t rectCounter()
+    uint32_t rectCounter()
     {
         return this->rectCount;
     }
