@@ -3,7 +3,7 @@
 #include <iostream>
 //#include "../inc./classes.hpp"
 
-#include <iostream>
+using namespace std;
 
 class Rect
 {
@@ -69,8 +69,6 @@ public:
     /* The Object(Class) Destructor */
     ~Rect() {}
 };
-
-using namespace std;
 
 int main()
 {
