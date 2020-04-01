@@ -17,14 +17,14 @@ public:
     {
         this->l = 0;
         this->w = 0;
-        this->rectCount++;
+        this->rectCount = 5;
     }
 
     Rect(uint32_t l, uint32_t w)
     {
         this->l = l;
         this->w = w;
-        this->rectCount++;
+        this->rectCount = 5;
     }
 
     /* The Object(Class) Methods */
