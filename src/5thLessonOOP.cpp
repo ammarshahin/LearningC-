@@ -25,6 +25,11 @@ public:
     }
 
     /* The Object(Class) Methods */
+    double area()
+    {
+        return (uint64_t)this->l * this->w;
+    }
+
     virtual double area()
     {
         return 0;
@@ -62,11 +67,6 @@ public:
     RectClass() : Shape() {} // Empty Constructor
 
     RectClass(uint32_t l, uint32_t w) : Shape(l, w) {}
-
-    double area()
-    {
-        return (uint64_t)this->l * this->w;
-    }
 
     /* The Object(Class) Destructor */
     ~RectClass() {}
