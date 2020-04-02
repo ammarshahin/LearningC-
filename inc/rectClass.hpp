@@ -64,6 +64,9 @@ public:
         return this->rectCount;
     }
 
+    /* Friends */
+    friend rectClass duplicate(rectClass x);
+
     /* The Object(Class) Destructor */
     ~rectClass() {}
 };
