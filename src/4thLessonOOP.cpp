@@ -89,7 +89,7 @@ int main()
     cout << "Rectangle area = " << r.area() << endl;
 
     TriClass t(10, 20);
-    cout << "Triangle area = " << t.area() << endl;
+    cout << "Triangle area = " << t.triArea() << endl;
 
     return 0;
 }
