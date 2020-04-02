@@ -86,10 +86,10 @@ public:
 int main()
 {
     RectClass r(10, 20);
-    cout << "Rectangle area = " << r.rectArea() << endl;
+    cout << "Rectangle area = " << r.area() << endl;
 
     TriClass t(10, 20);
-    cout << "Triangle area = " << t.triArea() << endl;
+    cout << "Triangle area = " << t.area() << endl;
 
     return 0;
 }
