@@ -2,8 +2,6 @@
 #define __CIRCLE__CLASS__HPP__
 
 #include <iostream>
-#include "rectClass.hpp"
-
 class circleClass
 {
 public:

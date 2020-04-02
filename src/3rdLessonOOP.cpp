@@ -28,9 +28,9 @@ int main()
     rectClass r1(10, 20), r2;
     r2 = duplicate(r1);
     cout << "Rectangle area = " << r2.area() << endl;
-    
+
     circleClass c; // c is a circle that has the rect r1 fitted inside it
-    cout << "Circle area = " << 2*c.area(r1) << endl;
-    
+    cout << "Circle area = " << c.area(r2) << endl;
+
     return 0;
 }

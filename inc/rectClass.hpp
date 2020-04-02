@@ -2,13 +2,11 @@
 #define __CLASSES__HPP__
 
 #include <iostream>
-#include "circleClass.hpp"
 
 class rectClass
 {
     /* The Object(Class) Data */
     uint32_t l, w;
-    static uint32_t rectCount;
 
 public:
     /* The Object(Class) Constructors */
@@ -16,14 +14,12 @@ public:
     {
         this->l = 0;
         this->w = 0;
-        this->rectCount++;
     }
 
     rectClass(uint32_t l, uint32_t w)
     {
         this->l = l;
         this->w = w;
-        this->rectCount++;
     }
 
     /* The Object(Class) Methods */
@@ -58,11 +54,6 @@ public:
         temp.l = this->l + x.l;
         temp.w = this->w + x.w;
         return temp;
-    }
-
-    uint32_t rectCounter()
-    {
-        return this->rectCount;
     }
 
     /* Friends */
