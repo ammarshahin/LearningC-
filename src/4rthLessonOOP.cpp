@@ -74,7 +74,7 @@ public:
     /* The Object(Class) Methods */
     double area()
     {
-        return (uint64_t)0.5 * l * w;
+        return (double)0.5 * l * w;
     }
 
     void changeLegnth(uint32_t l)
