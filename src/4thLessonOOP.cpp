@@ -88,11 +88,14 @@ int main()
     RectClass r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
 
-    Shape *rp = &r;
-    cout << "Rectangle area = " << rp->area() << endl;
-
     TriClass t(10, 20);
     cout << "Triangle area = " << t.area() << endl;
+
+    Shape *rp = &r; // rp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
+    cout << "Rectangle area = " << rp->area() << endl;
+
+    Shape *tp = &t; // tp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
+    cout << "Circle area = " << tp->area() << endl;
 
     return 0;
 }
