@@ -30,7 +30,7 @@ int main()
     cout << "Rectangle area = " << r2.area() << endl;
 
     circleClass c; // c is a circle that has the rect r1 fitted inside it
-    cout << "Circle area = " << c.area(r2) << endl;
+    cout << "Circle area = " << 2*c.area(r1) << endl;
 
     return 0;
 }
