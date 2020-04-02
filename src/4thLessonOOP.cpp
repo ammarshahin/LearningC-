@@ -1,4 +1,4 @@
-/**** 1. Inheritance **********/
+/**** Inheritance Lesson **********/
 
 #include <iostream>
 using namespace std;
@@ -29,22 +29,22 @@ public:
         return (uint64_t)l * w;
     }
 
-    void changeLegnth(uint32_t l)
+    void setLegnth(uint32_t l)
     {
         this->l = l;
     }
 
-    void changeWidth(uint32_t w)
+    void setWidth(uint32_t w)
     {
         this->w = w;
     }
 
-    uint32_t legnth()
+    uint32_t getLegnth()
     {
         return this->l;
     }
 
-    uint32_t width()
+    uint32_t getWidth()
     {
         return this->w;
     }
@@ -74,7 +74,7 @@ public:
     TriClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
     /* The Object(Class) Methods */
-    double area()
+    double area() // Overriding [This method will override the inherited area method]
     {
         return (double)0.5 * this->l * this->w;
     }
