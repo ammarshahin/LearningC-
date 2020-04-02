@@ -61,12 +61,6 @@ public:
 
     RectClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
-    /* The Object(Class) Methods */
-    uint64_t rectArea()
-    {
-        return this->area();
-    }
-
     /* The Object(Class) Destructor */
     ~RectClass() {}
 };
@@ -80,7 +74,7 @@ public:
     TriClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
     /* The Object(Class) Methods */
-    double triArea()
+    double area()
     {
         return (double)0.5 * this->area();
     }
