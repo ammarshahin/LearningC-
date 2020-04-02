@@ -74,9 +74,9 @@ public:
     TriClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
     /* The Object(Class) Methods */
-    double triArea()
+    double area()
     {
-        return (double)this->area() * 0.5;
+        return (double)0.5 * this->l * this->w;
     }
 
     /* The Object(Class) Destructor */
