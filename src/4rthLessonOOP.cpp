@@ -62,10 +62,10 @@ public:
     RectClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
     /* The Object(Class) Methods */
-    /*uint64_t RectArea()
+    uint64_t rectArea()
     {
         return this->area();
-    }*/
+    }
 
     /* The Object(Class) Destructor */
     ~RectClass() {}
@@ -75,12 +75,12 @@ class TriClass : public Shape
 {
 public:
     /* The Object(Class) Constructors */
-    TriClass() : Shape() {}// Empty Constructor
+    TriClass() : Shape() {} // Empty Constructor
 
-    TriClass(uint32_t l, uint32_t w) : Shape(l,w) {}
+    TriClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
     /* The Object(Class) Methods */
-    double TriArea()
+    double triArea()
     {
         return (double)0.5 * this->area();
     }
@@ -92,10 +92,10 @@ public:
 int main()
 {
     RectClass r(10, 20);
-    cout << "Rectangle area = " << r.area() << endl;
+    cout << "Rectangle area = " << r.rectArea() << endl;
 
     TriClass t(10, 20);
-    cout << "Triangle area = " << t.TriArea() << endl;
+    cout << "Triangle area = " << t.triArea() << endl;
 
     return 0;
 }
