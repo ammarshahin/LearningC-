@@ -71,5 +71,7 @@ public:
     ~rectClass() {}
 };
 
-rectClass::uint32_t rectCount = 0;
+/* Global variables */
+uint32_t rectClass::rectCount = 0;
+
 #endif /* __CLASSES__HPP__ */
