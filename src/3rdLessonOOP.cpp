@@ -2,17 +2,18 @@
 
 #include <iostream>
 #include "../inc./rectClass.hpp"
+#include "../inc./circleClass.hpp"
 
 using namespace std;
 
 rectClass duplicate(rectClass x)
 {
     rectClass c;
-    /*  Using Methods  */
+    /*  1. Using Methods  */
     //c.changeLegnth(x.legnth());
     //c.changeWidth(x.width());
 
-    /* Operator overloading for '=' */
+    /* 2. Operator overloading for '=' */
     //c = x;
 
     /* Using friend Mechanism */
@@ -27,5 +28,9 @@ int main()
     rectClass r1(10, 20), r2;
     r2 = duplicate(r1);
     cout << "Rectangle area = " << r2.area() << endl;
+    
+    circleClass c; // c is a circle that has the rect r1 fitted inside it
+    cout << "Circle area = " << 2*c.area(r1) << endl;
+    
     return 0;
 }
