@@ -74,7 +74,7 @@ public:
     TriClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
     /* The Object(Class) Methods */
-    double area()
+    double triArea()
     {
         return (double)this->area() * 0.5;
     }
@@ -89,7 +89,7 @@ int main()
     cout << "Rectangle area = " << r.area() << endl;
 
     TriClass t(10, 20);
-    cout << "Triangle area = " << t.area() << endl;
+    cout << "Triangle area = " << t.triArea() << endl;
 
     return 0;
 }
