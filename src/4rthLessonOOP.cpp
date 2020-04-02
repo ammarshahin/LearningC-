@@ -72,7 +72,7 @@ public:
     }
 
     /* The Object(Class) Methods */
-    uint64_t area()
+    double area()
     {
         return (uint64_t)0.5 * l * w;
     }
