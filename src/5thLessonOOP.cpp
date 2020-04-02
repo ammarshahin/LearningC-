@@ -25,15 +25,7 @@ public:
     }
 
     /* The Object(Class) Methods */
-    double area()
-    {
-        return (uint64_t)this->l * this->w;
-    }
-
-    virtual double area()
-    {
-        return 0;
-    }
+    virtual double area() = 0; // Abstact Class {Shape Can't make any objects}
 
     void setLegnth(uint32_t l)
     {
@@ -68,6 +60,12 @@ public:
 
     RectClass(uint32_t l, uint32_t w) : Shape(l, w) {}
 
+    /* The Object(Class) Methods */
+    double area()
+    {
+        return (double)this->l * this->w;
+    }
+
     /* The Object(Class) Destructor */
     ~RectClass() {}
 };
@@ -93,16 +91,10 @@ public:
 
 int main()
 {
-    RectClass r(10, 20);
-    cout << "Rectangle area = " << r.area() << endl;
-
-    TriClass t(10, 20);
-    cout << "Triangle area = " << t.area() << endl;
-
-    Shape *rp = &r; // rp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
+    Shape *rp = new RectClass(10, 20); // rp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
     cout << "Rectangle area = " << rp->area() << endl;
 
-    Shape *tp = &t; // tp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
+    Shape *tp = new TriClass(10, 20); // tp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
     cout << "Circle area = " << tp->area() << endl;
 
     return 0;
