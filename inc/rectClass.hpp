@@ -2,6 +2,7 @@
 #define __CLASSES__HPP__
 
 #include <iostream>
+#include "circleClass.hpp"
 
 class rectClass
 {
@@ -66,11 +67,10 @@ public:
 
     /* Friends */
     friend rectClass duplicate(rectClass x);
+    friend class circleClass;
 
     /* The Object(Class) Destructor */
     ~rectClass() {}
 };
-
-uint32_t rectClass::rectCount = 0;
 
 #endif /* __CLASSES__HPP__ */
