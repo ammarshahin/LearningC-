@@ -95,7 +95,7 @@ int main()
     cout << "Rectangle area = " << rp->area() << endl;
 
     Shape *tp = &t; // tp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
-    cout << "Circle area = " << tp->area() << endl;
+    cout << "Circle area = " << tp->area() << endl; // Note that tp is accessing the area method in the Shape Class..NOT the one in TriClass
 
     return 0;
 }
