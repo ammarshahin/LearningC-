@@ -6,15 +6,18 @@
 
 using namespace std;
 
+rectClass duplicate(rectClass x)
+{
+    rectClass c;
+    c.changeLegnth(x.legnth());
+    c.changeWidth(x.width());
+    return c;
+}
+
 int main()
 {
-    rectClass r1(10, 20), r2(20, 10), r3;
-    r3 = r1 + r2;
-
-    cout << "Rectangle Length = " << r3.legnth() << endl;
-    cout << "Rectangle Width = " << r3.width() << endl;
-    cout << "Rectangle area = " << r3.area() << endl;
-    cout << "The Number of created rects = " << r3.rectCounter() << endl;
-
+    rectClass r1(10, 20),r2;
+    r2 = duplicate(r1);
+    cout << "Rectangle area = " << r2.area() << endl;
     return 0;
 }
