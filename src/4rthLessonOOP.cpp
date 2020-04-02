@@ -10,6 +10,18 @@ protected:
     uint32_t l, w;
 
 public:
+    /* The Object(Class) Constructors */
+    Shape() // Empty Constructor(Defult Constructor)
+    {
+        this->l = 0;
+        this->w = 0;
+    }
+
+    Shape(uint32_t l, uint32_t w)
+    {
+        this->l = l;
+        this->w = w;
+    }
     /* The Object(Class) Methods */
     uint64_t area()
     {
@@ -21,16 +33,16 @@ class RectClass : public Shape // RectClass is now inherited the Shape attripute
 {
 public:
     /* The Object(Class) Constructors */
-    RectClass() // Empty Constructor
+    RectClass() : Shape() // Empty Constructor
     {
         this->l = 0;
         this->w = 0;
     }
 
-    RectClass(uint32_t l, uint32_t w)
+    RectClass(uint32_t l, uint32_t w) : Shape(l,w)
     {
-        this->l = l;
-        this->w = w;
+        //this->l = l;
+        //this->w = w;
     }
 
     /* The Object(Class) Methods */
@@ -63,7 +75,7 @@ public:
     ~RectClass() {}
 };
 
-class TriClass : private Shape
+class TriClass : public Shape
 {
 public:
     /* The Object(Class) Constructors */
