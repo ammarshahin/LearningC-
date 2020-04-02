@@ -1,5 +1,4 @@
-/**** 1. Operator OverLoading **********/
-/**** 2. Static Keyword **********/
+/**** 1. Friend **********/
 
 #include <iostream>
 #include "../inc./rectClass.hpp"
@@ -9,8 +8,9 @@ using namespace std;
 rectClass duplicate(rectClass x)
 {
     rectClass c;
-    c.changeLegnth(x.legnth());
-    c.changeWidth(x.width());
+    //c.changeLegnth(x.legnth());
+    //c.changeWidth(x.width());
+    c=x; 
     return c;
 }
 
