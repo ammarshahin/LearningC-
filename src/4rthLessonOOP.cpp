@@ -3,11 +3,15 @@
 #include <iostream>
 using namespace std;
 
-class RectClass
+class Shape
 {
+protected:
     /* The Object(Class) Data */
     uint32_t l, w;
+};
 
+class RectClass : Shape
+{
 public:
     /* The Object(Class) Constructors */
     RectClass() // Empty Constructor
@@ -52,11 +56,8 @@ public:
     ~RectClass() {}
 };
 
-class TriClass
+class TriClass : Shape
 {
-    /* The Object(Class) Data */
-    uint32_t l, w;
-
 public:
     /* The Object(Class) Constructors */
     TriClass() // Empty Constructor
