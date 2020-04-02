@@ -10,7 +10,7 @@ protected:
     uint32_t l, w;
 };
 
-class RectClass : Shape
+class RectClass : private Shape // RectClass is now inherited the Shape attriputes (l & w)
 {
 public:
     /* The Object(Class) Constructors */
@@ -56,7 +56,7 @@ public:
     ~RectClass() {}
 };
 
-class TriClass : Shape
+class TriClass : private Shape
 {
 public:
     /* The Object(Class) Constructors */
