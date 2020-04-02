@@ -76,7 +76,7 @@ public:
     /* The Object(Class) Methods */
     double area()
     {
-        return (double)0.5 * this->area();
+        return (double)this->area() * 0.5;
     }
 
     /* The Object(Class) Destructor */
