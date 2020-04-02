@@ -88,7 +88,7 @@ int main()
     RectClass r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
 
-    RectClass *rp = &r;
+    Shape *rp = &r;
     cout << "Rectangle area = " << rp->area() << endl;
 
     TriClass t(10, 20);
