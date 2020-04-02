@@ -8,9 +8,16 @@ class Shape
 protected:
     /* The Object(Class) Data */
     uint32_t l, w;
+
+public:
+    /* The Object(Class) Methods */
+    uint64_t area()
+    {
+        return (uint64_t)l * w;
+    }
 };
 
-class RectClass : private Shape // RectClass is now inherited the Shape attriputes (l & w)
+class RectClass : public Shape // RectClass is now inherited the Shape attriputes (l & w)
 {
 public:
     /* The Object(Class) Constructors */
@@ -27,9 +34,9 @@ public:
     }
 
     /* The Object(Class) Methods */
-    uint64_t area()
+    uint64_t RectArea()
     {
-        return (uint64_t)l * w;
+        return this->area();
     }
 
     void changeLegnth(uint32_t l)
@@ -73,9 +80,9 @@ public:
     }
 
     /* The Object(Class) Methods */
-    double area()
+    double TriArea()
     {
-        return (double)0.5 * l * w;
+        return (double)0.5 * this->area();
     }
 
     void changeLegnth(uint32_t l)
@@ -104,11 +111,11 @@ public:
 
 int main()
 {
-    RectClass r1(10, 20);
-    cout << "Rectangle area = " << r1.area() << endl;
+    RectClass r(10, 20);
+    cout << "Rectangle area = " << r.RectArea() << endl;
 
-    TriClass t1(10, 20);
-    cout << "Triangle area = " << t1.area() << endl;
+    TriClass t(10, 20);
+    cout << "Triangle area = " << t.TriArea() << endl;
 
     return 0;
 }
