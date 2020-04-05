@@ -24,7 +24,7 @@ int main()
     cout << "The g = " << getMax<float, float>(2.1, 10.4343) << endl; // replace the T template with float
     cout << "The g = " << getMax<double, double>(2.0012, 10) << endl; // replace the T template with double
     */
-    cout << "The g = " << divfunc<double, int>(10, 2.0012) << endl; // replace the T template with double
+    cout << "The g = " << divfunc<double, int>(10, 2.12) << endl; // replace the T template with double
 
     return 0;
 }
