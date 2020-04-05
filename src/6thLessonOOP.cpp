@@ -7,7 +7,7 @@ template <class T>
 
 inline T getMax(T a, T b)
 {
-    return ((a > b) ? a : b)
+    return ((a > b) ? a : b);
 }
 
 int main()
