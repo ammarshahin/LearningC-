@@ -5,8 +5,8 @@
 ############################### Variables #######################################
 
 ######### change The Files Name here ########
-_DEPS = rectClass.hpp              # The includes[.h and .hpp]
-_OBJ  = 5thLessonOOP.o
+_DEPS = rectClass.hpp            # The includes[.h and .hpp]
+_OBJ  = 6thLessonOOP.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
