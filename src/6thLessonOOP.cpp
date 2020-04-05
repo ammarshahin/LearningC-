@@ -7,7 +7,7 @@ template <class R, class T> // Template parameter
 
 R divfunc(T a, T b)
 {
-    return a / b;
+    return (R)a / b;
 }
 
 /*
