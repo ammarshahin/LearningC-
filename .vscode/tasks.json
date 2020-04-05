@@ -9,7 +9,7 @@
             "command": "g++",
             "args": [
                 "-g",
-                "src\\HelloProgram.c++",
+                "src\\6thLessonOOP.cpp",
                 "-o",
                 "app.exe"
             ],
