@@ -8,6 +8,7 @@ inline uint8_t getMax(uint8_t a, uint8_t b)
 
 int main()
 {
-    cout << getMax(2, 10) << endl;
+    uint8_t z = getMax(2, 10);
+    cout << z << endl;
     return 0;
 }
