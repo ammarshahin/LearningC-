@@ -17,7 +17,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 IDIR = .\inc
 ODIR = .\obj
 LDIR = .\lib
-SDIR = .\src
+SDIR = .\hakerrankExersise
 
 LIBS = -lm
 
