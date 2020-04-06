@@ -8,17 +8,18 @@ using namespace std;
 int main()
 {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int arr[1000];
     int n;
     cin >> n;
-    int *parr = new int[n];
+    
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &parr[i]);
+        scanf("%d", &arr[i]);
     }
 
     for (int i = n - 1; i >= 0; i--)
     {
-        printf("%d", parr[i]);
+        printf("%d", arr[i]);
     }
 
     return 0;
