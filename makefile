@@ -1,4 +1,4 @@
-############################### C++ MakeFile #######################################
+############################### C++ makefile #######################################
 # Author: Ammar Shahin
 # Date:   31/3/2020
 
@@ -16,7 +16,6 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj
-LDIR = .\lib
 SDIR = .\hakerrankExersise
 
 LIBS = -lm
