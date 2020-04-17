@@ -1,0 +1,13 @@
+1. 
+Namespace is a collection of data an functions and objects (a bag).
+These collections can be accessed via accesses operator :: 
+ex:
+std::cout
+std::cin
+std::endl
+
+2.
+<< is an insertion operator 
+ex:
+A << B    // this mean insert B into A
+
