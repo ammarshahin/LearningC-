@@ -35,8 +35,15 @@ for(int element : elements) // each loop the element variable takes a new value 
     std::cout << element << std::endl
 
 
-
-
+/**
+ * 7. Lambda functions in C++11 (Very new concepts -_-) >> pointer to generic function
+ * are functions that don't have a a specific name.
+ * ex: 
+ **/
+auto sum_func = [] (int x,int y) -> int
+{
+    return x+y;
+};
 
 
 
