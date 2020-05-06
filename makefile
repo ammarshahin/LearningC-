@@ -16,7 +16,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\CppForCprogrammers
+SDIR = .\CppForCprogramers
 
 LIBS = -lm
 
