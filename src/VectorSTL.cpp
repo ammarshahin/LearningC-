@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-const int size = 30;
+const int size = 40;
 
 int arrSum(std::vector<int> v, int size);
 
