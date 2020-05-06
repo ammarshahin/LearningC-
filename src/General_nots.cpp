@@ -45,6 +45,13 @@ auto sum_func = [] (int x,int y) -> int
     return x+y;
 };
 
+/**
+ * 8. Include the standard C libraries in Cpp
+ * by only adding "c" before the name of the standard library 
+ */
+#include <stdio.h>  ==  #include <cstdio>
+#include <stdlib.h> ==  #include <cstdlib>
+#include <math.h>   ==  #include <cmath>
 
 
 
