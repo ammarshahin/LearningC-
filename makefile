@@ -6,7 +6,7 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = Strings.o
+_OBJ  = Week1Submession.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
@@ -16,7 +16,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\hakerrankExersise
+SDIR = .\CppForCprogrammers
 
 LIBS = -lm
 
