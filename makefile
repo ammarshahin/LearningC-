@@ -6,20 +6,19 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = Week1Submession.o
+_OBJ  = Week1Submission.o
 _EXC  = app.exe                  # The Excutable File name 
+#################################################################################
+ 
+CXXC = g++
+CXXFLAGS = -I$(IDIR) -Wall
+CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj
 SDIR = .\CppForCprogrammers
 
 LIBS = -lm
-
-#################################################################################
- 
-CXXC = g++
-CXXFLAGS = -I$(IDIR) -Wall
-CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
