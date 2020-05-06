@@ -28,7 +28,18 @@ int vecSum(std::vector<int> v, int size);
  */
 int main()
 {
-    std::vector<int> x;
+    // Declaring a vector
+    std::vector<int> v1(10); // Make a vector with 10 int elements that have an initialization value of 0 (heap)
+    std::cout << v1[0] << " " << v1[4] << std::endl;
+
+    std::vector<char> v2(3, 7); // Make a vector with 3 char elements that have an initialization value of 7D
+    std::cout << v2[0] << " " << v2[2] << std::endl;
+
+    std::cout << v1.size() << std::endl; // return the size of the vector
+
+    std::cout << v2.at(0) << std::endl; // Better way to access the elements of the vector v2.at(0) == v2[0]
+
+    std::vector<int> x; // Make a vector with 0 elements
     int sum = 0;
 
     for (int i = 0; i < size; ++i)
