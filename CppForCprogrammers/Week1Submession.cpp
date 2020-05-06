@@ -12,7 +12,6 @@
 
 #include <iostream>
 #include <vector> 
-#include<bits/stdc++.h> 
 
 const int N = 40;
 

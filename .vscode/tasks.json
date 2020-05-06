@@ -9,7 +9,7 @@
             "command": "g++",
             "args": [
                 "-g",
-                "hakerrankExersise\\ArraysIntroduction.cpp",
+                "CppForCprogrammers\\Week1Submession.cpp",
                 "-o",
                 "app.exe"
             ],
