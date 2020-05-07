@@ -41,17 +41,12 @@ int main()
     std::deque<int> d2(3, 7); // Make a deque with 3 int elements that have an initialization value of 7
     std::cout << d2[0] << std::endl;
 
-    std::deque<int> d3{4, 5, 6, 7}; // Make a deque with 4 int elements that have an initialization value of the entered values
+    std::deque<int> d3{4, 5, 6, 7, 9}; // Make a deque with 4 int elements that have an initialization value of the entered values
     std::cout << d3[0] << std::endl;
-
+    std::cout << d3.at(0) << std::endl;  // Better way to access the elements of the deque d3.at(0) == d3[0]
     std::cout << d3.size() << std::endl; // return the size of the deque
 
-    std::cout << d2.at(0) << std::endl; // Better way to access the elements of the deque v2.at(0) == v2[0]
-
-    /* 
-    * ex: 
-    *
-    */
+    /* ex: */
     std::deque<int> x; // Make a deque with 0 elements (without Constructor)
     int sum = 0;
 
