@@ -22,7 +22,7 @@
 #include <deque>
 
 /* Const variabel size */
-const int size = 0;
+const int size = 40;
 
 /* Prototypes */
 int dequeSum(std::deque<int> v, int size);
