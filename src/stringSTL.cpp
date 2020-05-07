@@ -38,7 +38,7 @@ int main()
 
     str1.append(str2);
 
-    std::cout << str1 << str2 << std::endl;
+    std::cout << str1 << std::endl;
 
     int size = str1.size();  // Return the size of the string (the count of the letters without the null terminator)
     int len = str1.length(); // Return the size of the string (the count of the letters without the null terminator)
