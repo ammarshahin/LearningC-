@@ -36,14 +36,18 @@ int main()
 
     std::cout << str1 << str2 << std::endl;
 
-    str1.append(str2);
+    str1 += str2; // == str1.append(str2) >> concatante the 2 strings(str1 = str1 + str2) [overloading]
 
     std::cout << str1 << std::endl;
 
-    int size = str1.size();  // Return the size of the string (the count of the letters without the null terminator)
-    int len = str1.length(); // Return the size of the string (the count of the letters without the null terminator)
+    int size = str1.size();                       // Return the size of the string (the count of the letters without the null terminator)
+    int len = str1.length();                      // Return the size of the string (the count of the letters without the null terminator)
+    std::cout << size << " " << len << std::endl; // the same output (len == size)
 
-    std::cout << size << " " << len << std::endl;
+    std::cin >> str2; // Will get the first word in the line terminal only and ignore the rest
+    std::getline(std::cin, str2); // Will get the entire line(with spaces) and set it into str2
+
+    std::cout << str2 << std::endl; 
 
     return 0;
 }
