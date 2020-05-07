@@ -33,18 +33,17 @@ int main()
     std::string str2;               // Empty string (garpage)
     std::cout << str2 << std::endl; // Will not be printed
     str2 = "Ammar Shahin";
-    
+
     std::cout << str1 << str2 << std::endl;
 
-    str1.c_str(str2);
-    
+    str1.append(str2);
+
     std::cout << str1 << str2 << std::endl;
 
-    int size = str1.size(); // Return the size of the string (the count of the letters without the null terminator)
+    int size = str1.size();  // Return the size of the string (the count of the letters without the null terminator)
     int len = str1.length(); // Return the size of the string (the count of the letters without the null terminator)
 
     std::cout << size << " " << len << std::endl;
-    
 
     return 0;
 }
