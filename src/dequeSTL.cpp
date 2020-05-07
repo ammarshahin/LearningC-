@@ -22,7 +22,7 @@
 #include <deque>
 
 /* Const variabel size */
-const int size = 40;
+const int size = 0;
 
 /* Prototypes */
 int dequeSum(std::deque<int> v, int size);
@@ -48,7 +48,7 @@ int main()
 
     std::cout << d2.at(0) << std::endl; // Better way to access the elements of the deque v2.at(0) == v2[0]
 
-/* 
+    /* 
  * ex: 
  *
  */
@@ -57,9 +57,13 @@ int main()
 
     for (int i = 0; i < size; ++i)
         x.push_back(i); // add an element to the deque with the value of i (dynamic memory allocation)
- 
-    sum = dequeSum(x, size);
-    std::cout << "the Sum of the " << size << " element is : " << sum << std::endl;
+
+    sum = dequeSum(x, x.size());
+
+    if (x.empty())
+        std::cout << "Empty deque" << std::endl;
+    else
+        std::cout << "the Sum of the " << x.size() << " element is : " << sum << std::endl;
 
     return 0;
 }
