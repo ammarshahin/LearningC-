@@ -27,7 +27,7 @@
  */
 int main()
 {
-    std::string str1 = ("Hello World!!!"); // constructor initialization
+    std::string str1 = ("Hello "); // constructor initialization
     std::cout << str1 << std::endl;
 
     std::string str2;               // Empty string (garpage)
@@ -36,8 +36,12 @@ int main()
     
     std::cout << str1 << str2 << std::endl;
 
-    uint8_t size = str1.size(); // Return the size of the string (the count of the letters without the null terminator)
-    uint8_t len = str1.length(); // Return the size of the string (the count of the letters without the null terminator)
+    str1.c_str(str2);
+    
+    std::cout << str1 << str2 << std::endl;
+
+    int size = str1.size(); // Return the size of the string (the count of the letters without the null terminator)
+    int len = str1.length(); // Return the size of the string (the count of the letters without the null terminator)
 
     std::cout << size << " " << len << std::endl;
     
