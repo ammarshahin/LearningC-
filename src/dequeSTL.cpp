@@ -67,10 +67,11 @@ int main()
 
     x.pop_back(); // remove the last element from the deque
 
-    for(int i : x)
+    for (int i : x)
         std::cout << i << " ";
-        std::cout << std::endl;
-        
+
+    std::cout << std::endl;
+
     return 0;
 }
 
