@@ -94,5 +94,6 @@ int dequeSum(std::deque<int> d, int size)
     int sum = 0;
     for (int i = 0; i < size; ++i)
         sum += d[i];
+
     return sum;
 }
