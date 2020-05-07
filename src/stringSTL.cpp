@@ -26,9 +26,11 @@
  */
 int main()
 {
-    std::string str1 = ("Hello World!!!");
+    std::string str1 = ("Hello World!!!"); // constructor initialization 
     std::cout << str1 << std::endl;
 
+    std::string str2; // Empty string
+    std::cout << str2 << std::endl; // garpage
 
 
     return 0;
