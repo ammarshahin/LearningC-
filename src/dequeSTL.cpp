@@ -65,21 +65,23 @@ int main()
     else
         std::cout << "the Sum of the " << x.size() << " element is : " << sum << std::endl;
 
-/* Print the deque */
-    for (int i : x)  // using for-each loop [i will be equal to the next element in each iteration]
-        std::cout << i << " ";  
+    /* Print the deque */
+    for (int i : x) // using for-each loop [i will be equal to the next element in each iteration]
+        std::cout << i << " ";
+
+    std::cout << std::endl;
 
     x.pop_back(); // remove the last element from the deque [x[39] = 39]
 
-    for (int i : x)  // using for-each loop [i will be equal to the next element in each iteration]
-        std::cout << i << " ";  
+    for (int i : x) // using for-each loop [i will be equal to the next element in each iteration]
+        std::cout << i << " ";
 
     std::cout << std::endl;
 
     x.push_front(100); // push a new element to the front of the deque
 
-    for (int i : x)  // using for-each loop [i will be equal to the next element in each iteration]
-        std::cout << i << " ";  
+    for (int i : x) // using for-each loop [i will be equal to the next element in each iteration]
+        std::cout << i << " ";
 
     std::cout << std::endl;
     return 0;
