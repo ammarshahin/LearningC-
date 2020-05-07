@@ -44,10 +44,11 @@ int main()
     int len = str1.length();                      // Return the size of the string (the count of the letters without the null terminator)
     std::cout << size << " " << len << std::endl; // the same output (len == size)
 
-    std::cin >> str2; // Will get the first word in the line terminal only and ignore the rest
-    std::getline(std::cin, str2); // Will get the entire line(with spaces) and set it into str2
+    std::string str3,str4;
+    std::cin >> str3; // Will get the first word in the line terminal only and ignore the rest
+    std::getline(std::cin, str4); // Will get the entire line(with spaces) and set it into str4
 
-    std::cout << str2 << std::endl; 
+    std::cout << str3 << std::endl << str4 << std::endl; 
 
     return 0;
 }
