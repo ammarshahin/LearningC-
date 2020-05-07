@@ -1,10 +1,14 @@
+/**** 1. Defining a Class **********/
+/**** 2. Decalring a Class **********/
+/**** 3. Diffrance between public, private, and protected **********/
+/**** 4. This keyword and it's uses in access mechanism **********/
 #include <iostream>
 
 using namespace std;
 class Rect
 {
     /* The Object(Class) Data */
-    uint32_t l, w;
+    uint32_t l, w; // defult private elements
 
 public:
     /* The Object(Class) Constructor */
@@ -15,17 +19,17 @@ public:
     }
 
     /* The Object(Class) Methods */
-    uint64_t area()
+    uint64_t area() const  // the const here mean that this method will not change the current[values] of the object
     {
         return (uint64_t)l * w;
     }
 
-    void changeLegnth(uint32_t l)
+    void setLegnth(uint32_t l)
     {
         this->l = l;
     }
 
-    void changeWidth(uint32_t w)
+    void setWidth(uint32_t w)
     {
         this->w = w;
     }
@@ -55,7 +59,7 @@ public:
         return (double)PI * r * r;
     }
 
-    void changeRadius(double r)
+    void setRadius(double r)
     {
         this->r = r;
     }
@@ -68,13 +72,13 @@ int main()
 {
     Rect r(10, 20);
     cout << "Rectangle area = " << r.area() << endl;
-    r.changeLegnth(30);
-    r.changeWidth(40);
+    r.setLegnth(30);
+    r.setWidth(40);
     cout << "Rectangle area = " << r.area() << endl;
 
     Circle c(10);
     cout << "Circle area = " << c.area() << endl;
-    c.changeRadius(100);
+    c.setRadius(100);
     cout << "Rectangle area = " << c.area() << endl;
 
     return 0;
