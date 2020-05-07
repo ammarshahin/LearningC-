@@ -17,6 +17,7 @@
 /********************** INCLUDES ****************************/
 /************************************************************/
 #include <iostream>
+#include <cstdint>
 #include <string>
 
 /**
@@ -26,12 +27,20 @@
  */
 int main()
 {
-    std::string str1 = ("Hello World!!!"); // constructor initialization 
+    std::string str1 = ("Hello World!!!"); // constructor initialization
     std::cout << str1 << std::endl;
 
-    std::string str2; // Empty string
-    std::cout << str2 << std::endl; // garpage
+    std::string str2;               // Empty string (garpage)
+    std::cout << str2 << std::endl; // Will not be printed
+    str2 = "Ammar Shahin";
+    
+    std::cout << str1 << str2 << std::endl;
 
+    uint8_t size = str1.size(); // Return the size of the string (the count of the letters without the null terminator)
+    uint8_t len = str1.length(); // Return the size of the string (the count of the letters without the null terminator)
+
+    std::cout << size << " " << len << std::endl;
+    
 
     return 0;
 }
