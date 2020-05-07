@@ -36,22 +36,22 @@ int main()
 {
     // Declaring a deque with Constructor
     std::deque<int> d1(10); // Make a deque with 10 int elements that have an initialization value of 0 (heap)
-    std::cout << d1[0] << " " << d1[4] << std::endl;
+    std::cout << d1[0] << std::endl;
 
     std::deque<int> d2(3, 7); // Make a deque with 3 int elements that have an initialization value of 7
-    std::cout << d2[0] << " " << d2[1] << std::endl;
+    std::cout << d2[0] << std::endl;
 
     std::deque<int> d3{4, 5, 6, 7}; // Make a deque with 4 int elements that have an initialization value of the entered values
-    std::cout << d3[0] << " " << d3[1] << std::endl;
+    std::cout << d3[0] << std::endl;
 
     std::cout << d3.size() << std::endl; // return the size of the deque
 
     std::cout << d2.at(0) << std::endl; // Better way to access the elements of the deque v2.at(0) == v2[0]
 
     /* 
- * ex: 
- *
- */
+    * ex: 
+    *
+    */
     std::deque<int> x; // Make a deque with 0 elements (without Constructor)
     int sum = 0;
 
@@ -60,11 +60,17 @@ int main()
 
     sum = dequeSum(x, x.size());
 
-    if (x.empty())
+    if (x.empty()) // Check if the deque is empty
         std::cout << "Empty deque" << std::endl;
     else
         std::cout << "the Sum of the " << x.size() << " element is : " << sum << std::endl;
 
+    x.pop_back(); // remove the last element from the deque
+
+    for(int i : x)
+        std::cout << i << " ";
+        std::cout << std::endl;
+        
     return 0;
 }
 
