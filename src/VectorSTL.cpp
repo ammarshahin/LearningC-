@@ -32,19 +32,20 @@ int main()
     std::vector<int> v1(10); // Make a vector with 10 int elements that have an initialization value of 0 (heap)
     std::cout << v1[0] << " " << v1[4] << std::endl;
 
-    std::vector<int> v2(3, 7); // Make a vector with 3 char elements that have an initialization value of 7D
+    std::vector<int> v2(3, 7); // Make a vector with 3 int elements that have an initialization value of 7
     std::cout << v2[0] << " " << v2[1] << std::endl;
 
-    std::vector<int> v3{4, 5, 6, 7}; // Make a vector with 3 char elements that have an initialization value of 7D
+    std::vector<int> v3{4, 5, 6, 7}; // Make a vector with 4 int elements that have an initialization value of the entered values
     std::cout << v3[0] << " " << v3[1] << std::endl;
 
     std::cout << v3.size() << std::endl; // return the size of the vector
 
     std::cout << v2.at(0) << std::endl; // Better way to access the elements of the vector v2.at(0) == v2[0]
 
-    /* 
-  * ex: 
-  */
+/* 
+ * ex: 
+ *
+ */
     std::vector<int> x; // Make a vector with 0 elements (without Constructor)
     int sum = 0;
 
