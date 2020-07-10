@@ -6,7 +6,7 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = Strings.o
+_OBJ  = vectors.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
