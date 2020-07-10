@@ -6,7 +6,7 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = sgmsgfs.o
+_OBJ  = Strings.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
@@ -16,7 +16,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\src
+SDIR = .\DerekBanasTut
 
 LIBS = -lm
 
@@ -26,7 +26,7 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: git clean printStartMsg app run
+all: git clean printStartMsg app size run
 	
 size:                   #rule to git stastics og the program
 	@echo -------------Program Statics: -------------
