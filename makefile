@@ -16,7 +16,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\DerekBanasTut
+SDIR = .\src\DerekBanasTut
 
 LIBS = -lm
 
@@ -41,7 +41,7 @@ app: $(OBJ)
 git:                      # This rule is to automate aquick save to the VCS git 
 	@echo -------------Quick Saving...-------------
 	git add .
-	git commit -a -m "Quick Save" 
+	git commit -m "Quick Save" 
 
 run:
 	@echo -------------running...-------------
