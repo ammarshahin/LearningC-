@@ -4,11 +4,9 @@
 
 int main()
 {
-    int arr[10] = {1};
-    for (uint8_t i = 0; i < 10; i++)
-    {
-        std::cout << arr[i] << " ";
-    }
-    std::cout << std::endl;
+    std::string sAge = "0";
+    std::cout << "Enter Your age: ";
+    getline(std::cin, sAge);
+    uint8_t u8Age = stoi(sAge, u8Age);
     return 0;
 }
