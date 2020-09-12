@@ -6,17 +6,17 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = vectors.o
+_OBJ  = strings.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
 CXXC = g++
 CXXFLAGS = -I$(IDIR) -Wall
-CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -g -0g
+CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0#-g -0g 
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\src\DerekBanasTut
+SDIR = .\src\calebCurruTut
 
 LIBS = -lm
 
@@ -26,32 +26,32 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: git clean printStartMsg app size run
+all: printStartMsg app size run
 	
-size:                   #rule to git stastics og the program
-	@echo -------------Program Statics: -------------
-	size $(_EXC)
+app: $(OBJ)
+	@$(CXXC) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 printStartMsg: 
-	@echo -------------Building...-------------
+	@echo Building...
 
-app: $(OBJ)
-	$(CXXC) -o $@ $^ $(CXXFLAGS) $(LIBS)
+size:                   #rule to git stastics og the program
+	@echo Program Statics:
+	@size $(_EXC)
 
 git:                      # This rule is to automate aquick save to the VCS git 
-	@echo -------------Quick Saving...-------------
+	@echo Quick Saving...
 	git add .
 	git commit -m "Quick Save" 
 
 run:
-	@echo -------------running...-------------
+	@echo running...
 	@$(_EXC)
 
 $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
-	$(CXXC) -c -o $@ $< $(CXXFLAGS)
+	@$(CXXC) -c -o $@ $< $(CXXFLAGS)
 
-.PHONY: clean
+.PHONY: clean app
 
 clean:
-	@echo -------------Cleaning...-------------
-	del *.exe $(ODIR).\*.o
+	@echo Cleaning...
+	rm *.exe $(ODIR)./*.o
