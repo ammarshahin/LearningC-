@@ -54,4 +54,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 
 clean:
 	#@echo Cleaning...
-	rm *.exe $(ODIR)./*.o
+	rm -f *.exe $(ODIR)./*.o
