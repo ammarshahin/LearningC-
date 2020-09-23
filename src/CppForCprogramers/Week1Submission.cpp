@@ -28,7 +28,7 @@ const int N = 40;
 
 void sum(int &p, int n, std::vector<int> d)
 {
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
         p += d[i];
 }
 
