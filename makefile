@@ -1,9 +1,10 @@
+####################################################################################
 ############################### C++ makefile #######################################
+####################################################################################
 # Author: Ammar Shahin
 # Date:   31/3/2020
 
 ############################### Variables #######################################
-
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
 _OBJ  = strings.o
@@ -34,11 +35,11 @@ app: $(OBJ)
 printStartMsg: 
 	@echo Building...
 
-size:                   #rule to git stastics og the program
+size:                   #rule to git stastics of the program
 	@echo Program Statics:
 	@size $(_EXC)
 
-git:                      # This rule is to automate aquick save to the VCS git 
+git:                    # This rule is to automate aquick save to the VCS git 
 	@echo Quick Saving...
 	git add .
 	git commit -m "Quick Save" 
