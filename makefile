@@ -14,9 +14,9 @@ CXXC = g++
 CXXFLAGS = -I$(IDIR) -Wall
 CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
-IDIR = .\inc
-ODIR = .\obj
-SDIR = .\src\calebCurruTut
+IDIR = inc
+ODIR = obj
+SDIR = src\calebCurruTut
 
 LIBS = -lm
 
@@ -54,4 +54,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 
 clean:
 	@echo Cleaning...
-	rm -f *.exe $(ODIR)./*.o
+	rm -f *.exe $(ODIR)/*.o
