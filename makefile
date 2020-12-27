@@ -12,7 +12,7 @@ _EXC  = app.exe                  # The Excutable File name
  
 CXXC = g++
 CXXFLAGS = -I$(IDIR) -Wall
-CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0#-g -0g 
+CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = .\inc
 ODIR = .\obj
@@ -32,19 +32,19 @@ app: $(OBJ)
 	@$(CXXC) -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 printStartMsg: 
-	#@echo Building...
+	@echo Building...
 
 size:                   #rule to git stastics og the program
-	#@echo Program Statics:
+	@echo Program Statics:
 	@size $(_EXC)
 
 git:                      # This rule is to automate aquick save to the VCS git 
-	#@echo Quick Saving...
+	@echo Quick Saving...
 	git add .
 	git commit -m "Quick Save" 
 
 run:
-	#@echo running...
+	@echo running...
 	@$(_EXC)
 
 $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
@@ -53,5 +53,5 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 .PHONY: clean app
 
 clean:
-	#@echo Cleaning...
+	@echo Cleaning...
 	rm -f *.exe $(ODIR)./*.o
