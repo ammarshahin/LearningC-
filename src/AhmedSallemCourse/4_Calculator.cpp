@@ -19,18 +19,22 @@ int main()
         case '+':
             cout << "The result : " << x + y << endl;
             break;
+
         case '-':
             cout << "The result : " << x - y << endl;
             break;
+
         case '*':
             cout << "The result : " << x * y << endl;
             break;
+
         case '/':
             if (y != 0)
-                cout << "The result : " << x / y << endl;
+                cout << "The result : " << (double)x / y << endl;
             else
                 cout << "Division by zero is not possible !!!" << endl;
             break;
+
         case '^':
             while (y)
             {
@@ -39,6 +43,7 @@ int main()
             }
             cout << "The result : " << result << endl;
             break;
+
         default:
             cout << "Wrong Entry !!!";
         }

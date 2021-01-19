@@ -9,9 +9,9 @@ class rectClass
     uint32_t l, w;
     static uint32_t rectCount;
 
-public:
+  public:
     /* The Object(Class) Constructors */
-    rectClass() // Empty Constructor
+    rectClass()   // Empty Constructor
     {
         this->l = 0;
         this->w = 0;
@@ -68,7 +68,9 @@ public:
     friend rectClass duplicate(rectClass x);
     friend class circleClass;
     /* The Object(Class) Destructor */
-    ~rectClass() {}
+    ~rectClass()
+    {
+    }
 };
 
 /* Global variables */

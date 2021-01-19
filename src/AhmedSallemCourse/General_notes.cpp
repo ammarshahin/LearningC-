@@ -25,7 +25,7 @@ auto y = 5;    // this mean the variable y will be treated as int type
 /* 5. Uniform initialization in C++11
  * ex: 
  * Normal           Constructor    Recommended in C++11   */  
-int x = 10.5;    ==   int x(10)   ==     int x{10} 
+int x = 10.5;    ==   int x(10);   ==     int x{10}; 
 
 /* 6. For each loop in C++11
  * is away of making the for loop simplier.

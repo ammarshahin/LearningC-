@@ -6,7 +6,7 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = strings.o
+_OBJ  = 7_1stLessonOOP.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
@@ -16,7 +16,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\src\calebCurruTut
+SDIR = .\src\AhmedSallemCourse
 
 LIBS = -lm
 
@@ -54,4 +54,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 
 clean:
 	@echo Cleaning...
-	rm -f *.exe $(ODIR)./*.o
+	rm -rf *.exe $(ODIR)./*.o
