@@ -1,6 +1,5 @@
-#include <stdint.h>
+#include <cstdint>
 #include <iostream>
-#include <cstdlib>
 #include <string>
 #include <vector>
 #include <sstream>
@@ -18,7 +17,7 @@ int main()
     //std::cout << "Last Element: " << vecRandNums[vecRandNums.size() - 1];
 
     /* For-each loop*/
-    for (auto element : vecRandNums) // >> for each element in the vector
+    for (auto element : vecRandNums)   // >> for each element in the vector
         std::cout << element << " ";
     std::cout << std::endl;
     return 0;

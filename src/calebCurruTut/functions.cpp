@@ -1,6 +1,7 @@
 #include "cstdio"
 #include "iostream"
 #include "stdint.h"
+
 uint16_t power(uint8_t num, uint8_t pow);
 
 int main()
@@ -22,10 +23,4 @@ uint16_t power(uint8_t num, uint8_t pow)
         u16_result *= num;
     }
     return u16_result;
-}
-
-
-uint16_t vfgdfmg (void)
-{
-    return 1520;
 }
