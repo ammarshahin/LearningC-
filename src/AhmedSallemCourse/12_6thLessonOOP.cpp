@@ -1,9 +1,8 @@
-/********** template ************/
+/********** template (Generic programming)************/
 #include <iostream>
 using namespace std;
 
 template <class R, class T, int n = 5>   // R & T are Template parameter, n is a global variable
-
 class Test
 {
     T a, b;

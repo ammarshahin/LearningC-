@@ -34,7 +34,10 @@ class Rect
     }
 
     /* The Object(Class) Destructor */
-    ~Rect(){};
+    ~Rect()
+    {
+        ;
+    }
 };
 
 class Circle
@@ -64,7 +67,10 @@ class Circle
     }
 
     /* The Object(Class) Destructor */
-    ~Circle(){};
+    ~Circle()
+    {
+        ;
+    }
 };
 
 int main()

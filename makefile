@@ -6,7 +6,7 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = 7_1stLessonOOP.o
+_OBJ  = 14_vectorSTL.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  

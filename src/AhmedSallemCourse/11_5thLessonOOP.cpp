@@ -6,13 +6,13 @@ using namespace std;
 /**************** ShapeClass ******************/
 class Shape
 {
-protected:
+  protected:
     /* The Object(Class) Data */
     uint32_t l, w;
 
-public:
+  public:
     /* The Object(Class) Constructors */
-    Shape() // Empty Constructor(Defult Constructor)
+    Shape()   // Empty Constructor(Defult Constructor)
     {
         this->l = 0;
         this->w = 0;
@@ -25,7 +25,7 @@ public:
     }
 
     /* The Object(Class) Methods */
-    virtual double area() = 0; // Abstact Class {Shape Can't make any objects}
+    virtual double area() = 0;   // Now the Shape Class is an Abstact Class {We Can't make any objects from the Shape class}
 
     void setLegnth(uint32_t l)
     {
@@ -48,17 +48,25 @@ public:
     }
 
     /* The Object(Class) Destructor */
-    ~Shape() {}
+    ~Shape()
+    {
+    }
 };
 
 /**************** RectClass ******************/
-class RectClass : public Shape // RectClass is now inherited the Shape attriputes (l & w)
+class RectClass : public Shape   // RectClass is now inherited the Shape attriputes (l & w)
 {
-public:
+  public:
     /* The Object(Class) Constructors */
-    RectClass() : Shape() {} // Empty Constructor
+    RectClass()
+        : Shape()
+    {
+    }   // Empty Constructor
 
-    RectClass(uint32_t l, uint32_t w) : Shape(l, w) {}
+    RectClass(uint32_t l, uint32_t w)
+        : Shape(l, w)
+    {
+    }
 
     /* The Object(Class) Methods */
     double area()
@@ -67,31 +75,42 @@ public:
     }
 
     /* The Object(Class) Destructor */
-    ~RectClass() {}
+    ~RectClass()
+    {
+    }
 };
 
 /**************** TriClass ******************/
 class TriClass : public Shape
 {
-public:
+  public:
     /* The Object(Class) Constructors */
-    TriClass() : Shape() {} // Empty Constructor
+    TriClass()
+        : Shape()
+    {
+    }   // Empty Constructor
 
-    TriClass(uint32_t l, uint32_t w) : Shape(l, w) {}
+    TriClass(uint32_t l, uint32_t w)
+        : Shape(l, w)
+    {
+    }
 
     /* The Object(Class) Methods */
-    double area() // Overriding [This method will override the inherited area method]
+    double area()   // Overriding [This method will override the inherited area method]
     {
         return (double)0.5 * this->l * this->w;
     }
 
     /* The Object(Class) Destructor */
-    ~TriClass() {}
+    ~TriClass()
+    {
+    }
 };
 
 int main()
 {
-    Shape *sp = new RectClass(10, 20); // sp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
+    /* "new" is an operator that creates an object */
+    Shape *sp = new RectClass(10, 20);   // sp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
     cout << "Rectangle area = " << sp->area() << endl;
 
     sp = new TriClass(10, 20);

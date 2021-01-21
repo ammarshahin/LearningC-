@@ -7,8 +7,10 @@ class circleClass
 {
   public:
     /* The Object(Class) Constructors */
-    circleClass();   // Empty Constructor
-
+    circleClass()
+    {
+        ;   // Empty Constructor
+    }
     /* The Object(Class) Methods */
     uint64_t area(rectClass r)
     {
@@ -16,7 +18,10 @@ class circleClass
     }
 
     /* The Object(Class) Destructor */
-    ~circleClass();
+    ~circleClass()
+    {
+        ;
+    }
 };
 
 #endif /* __CIRCLE__CLASS__HPP__ */

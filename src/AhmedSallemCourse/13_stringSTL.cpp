@@ -3,7 +3,7 @@
  * 
  * @author Ammar Shahin (ammar0shahin@gmail.com)
  * 
- * @brief This file is to explore the string  standard library
+ * @brief This file is to explore the string standard library
  * 
  * @version v1
  * 
@@ -27,28 +27,29 @@
  */
 int main()
 {
-    std::string str1 = ("Hello "); // constructor initialization
+    std::string str1 = "Hello ";   // constructor initialization
     std::cout << str1 << std::endl;
 
-    std::string str2;               // Empty string (garpage)
-    std::cout << str2 << std::endl; // Will not be printed
+    std::string str2;                 // Empty string (garpage)
+    std::cout << str2 << std::endl;   // nothing will be printed
     str2 = "Ammar Shahin";
 
     std::cout << str1 << str2 << std::endl;
 
-    str1 += str2; // == str1.append(str2) >> concatante the 2 strings(str1 = str1 + str2) [overloading]
+    str1 += str2;   // == str1.append(str2) >> concatante the 2 strings(str1 = str1 + str2) [overloading]
 
     std::cout << str1 << std::endl;
 
-    int size = str1.size();                       // Return the size of the string (the count of the letters without the null terminator)
-    int len = str1.length();                      // Return the size of the string (the count of the letters without the null terminator)
-    std::cout << size << " " << len << std::endl; // the same output (len == size)
+    int size = str1.size();                         // Return the size of the string (the count of the letters without the null terminator)
+    int len = str1.length();                        // Return the size of the string (the count of the letters without the null terminator)
+    std::cout << size << " " << len << std::endl;   // the same output (len == size)
 
-    std::string str3,str4;
-    std::cin >> str3; // Will get the first word in the line terminal only and ignore the rest
-    std::getline(std::cin, str4); // Will get the entire line(with spaces) and set it into str4
+    std::string str3, str4;
+    // std::cin >> str3;   // Will get the first word in the line terminal only and ignore the rest
+    std::getline(std::cin, str4);   // Will get the entire line(with spaces) and set it into str4
 
-    std::cout << str3 << std::endl << str4 << std::endl; 
+    std::cout << str3 << std::endl
+              << str4 << std::endl;
 
     return 0;
 }
