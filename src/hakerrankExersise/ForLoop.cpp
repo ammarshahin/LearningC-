@@ -6,7 +6,7 @@ int main()
 {
     int startNum, endNum;
     cin >> startNum >> endNum;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
     // Write Your Code Here
     for (int i = startNum; i <= endNum; i++)
     {

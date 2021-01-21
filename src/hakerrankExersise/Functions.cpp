@@ -1,10 +1,7 @@
 #include <iostream>
 #include <cstdio>
-using namespace std;
 
-/*
-Add `int max_of_four(int a, int b, int c, int d)` here.
-*/
+using namespace std;
 
 int max_of_four(int a, int b, int c, int d)
 {
@@ -29,10 +26,10 @@ int max_of_four(int a, int b, int c, int d)
 
 int main()
 {
-    int a, b, c, d;
+    int a, b, c, d, ans;
     scanf("%d %d %d %d", &a, &b, &c, &d);
-    int ans = max_of_four(a, b, c, d);
-    printf("%d", ans);
+    ans = max_of_four(a, b, c, d);
+    printf("Max = %d", ans);
 
     return 0;
 }

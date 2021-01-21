@@ -6,7 +6,7 @@
 
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = 14_vectorSTL.o
+_OBJ  = Pointer.o
 _EXC  = app.exe                  # The Excutable File name 
 #################################################################################
  
@@ -16,7 +16,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\src\AhmedSallemCourse
+SDIR = .\src\hakerrankExersise
 
 LIBS = -lm
 
