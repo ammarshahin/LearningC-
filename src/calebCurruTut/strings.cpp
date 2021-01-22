@@ -8,7 +8,7 @@ int main()
     getline(std::cin, complete_greeting);
     std::cout << complete_greeting << std::endl;
 
-    //complete_greeting += " " + greeting;        // Append another string in the end of the other >> Same
+    //complete_greeting += " " + greeting;      // Append another string in the end of the other   >> Same
     complete_greeting.append(" " + greeting);   // Append another string in the end of the other   >> Same
 
     std::cout << complete_greeting << std::endl;

@@ -35,47 +35,47 @@ int dequeSum(std::deque<int> v, int size);
 int main()
 {
     // Declaring a deque with Constructor
-    std::deque<int> d1(10); // Make a deque with 10 int elements that have an initialization value of 0 (heap)
+    std::deque<int> d1(10);   // Make a deque with 10 int elements that have an initialization value of 0 (heap)
     std::cout << d1[0] << std::endl;
 
-    std::deque<int> d2(3, 7); // Make a deque with 3 int elements that have an initialization value of 7
+    std::deque<int> d2(3, 7);   // Make a deque with 3 int elements that have an initialization value of 7
     std::cout << d2[0] << std::endl;
 
-    std::deque<int> d3{4, 5, 6, 7, 9}; // Make a deque with 4 int elements that have an initialization value of the entered values
+    std::deque<int> d3{4, 5, 6, 7, 9};   // Make a deque with 4 int elements that have an initialization value of the entered values
     std::cout << d3[0] << std::endl;
-    std::cout << d3.at(0) << std::endl;  // Better way to access the elements of the deque d3.at(0) == d3[0]
-    std::cout << d3.size() << std::endl; // return the size of the deque
+    std::cout << d3.at(0) << std::endl;    // Better way to access the elements of the deque d3.at(0) == d3[0]
+    std::cout << d3.size() << std::endl;   // return the size of the deque
 
     /* ex: */
-    std::deque<int> x; // Make a deque with 0 elements (without Constructor)
+    std::deque<int> x;   // Make a deque with 0 elements (without Constructor)
     int sum = 0;
 
     for (int i = 0; i < size; ++i)
-        x.push_back(i); // add an element to the deque with the value of i (dynamic memory allocation)
+        x.push_back(i);   // add an element to the deque with the value of i (dynamic memory allocation)
 
     sum = dequeSum(x, x.size());
 
-    if (x.empty()) // Check if the deque is empty
+    if (x.empty())   // Check if the deque is empty
         std::cout << "Empty deque" << std::endl;
     else
-        std::cout << "the Sum of the " << x.size() << " element is : " << sum << std::endl;
+        std::cout << "the Sum of the " << x.size() << " elements is : " << sum << std::endl;
 
     /* Print the deque */
-    for (int i : x) // using for-each loop [i will be equal to the next element in each iteration]
+    for (int i : x)   // using for-each loop [i will be equal to the next element in each iteration]
         std::cout << i << " ";
 
     std::cout << std::endl;
 
-    x.pop_back(); // remove the last element from the deque [x[39] = 39]
+    x.pop_back();   // remove the last element from the deque [x[39] = 39]
 
-    for (int i : x) // using for-each loop [i will be equal to the next element in each iteration]
+    for (int i : x)   // using for-each loop [i will be equal to the next element in each iteration]
         std::cout << i << " ";
 
     std::cout << std::endl;
 
-    x.push_front(100); // push a new element to the front of the deque
+    x.push_front(100);   // push a new element to the front of the deque
 
-    for (int i : x) // using for-each loop [i will be equal to the next element in each iteration]
+    for (int i : x)   // using for-each loop [i will be equal to the next element in each iteration]
         std::cout << i << " ";
 
     std::cout << std::endl;

@@ -4,13 +4,12 @@
 /**** 4. This keyword and it's uses in access mechanism **********/
 #include <iostream>
 
-using namespace std;
 class Rect
 {
     /* The Object(Class) Data */
-    uint32_t l, w; // defult private elements
+    uint32_t l, w;   // defult private elements
 
-public:
+  public:
     /* The Object(Class) Constructor */
     Rect(uint32_t l, uint32_t w)
     {
@@ -19,12 +18,12 @@ public:
     }
 
     /* The Object(Class) Methods */
-    uint64_t area() const  // the const here mean that this method will not change the current[values] of the object
+    uint64_t area() const   // the const here mean that this method will not change the current[values] of the object
     {
         return (uint64_t)l * w;
     }
 
-    void setLegnth(uint32_t l)
+    void setLength(uint32_t l)
     {
         this->l = l;
     }
@@ -35,7 +34,10 @@ public:
     }
 
     /* The Object(Class) Destructor */
-    ~Rect() {}
+    ~Rect()
+    {
+        ;
+    }
 };
 
 class Circle
@@ -44,9 +46,9 @@ class Circle
     const float PI = 3.1415;
     double r;
 
-public:
+  public:
     /* The Object(Class) Constructor */
-    Circle() {} // Empty Constructor
+    Circle();   // Empty Constructor
 
     Circle(double r)
     {
@@ -65,21 +67,24 @@ public:
     }
 
     /* The Object(Class) Destructor */
-    ~Circle() {}
+    ~Circle()
+    {
+        ;
+    }
 };
 
 int main()
 {
     Rect r(10, 20);
-    cout << "Rectangle area = " << r.area() << endl;
-    r.setLegnth(30);
+    std::cout << "Rectangle area = " << r.area() << std::endl;
+    r.setLength(30);
     r.setWidth(40);
-    cout << "Rectangle area = " << r.area() << endl;
+    std::cout << "Rectangle area = " << r.area() << std::endl;
 
     Circle c(10);
-    cout << "Circle area = " << c.area() << endl;
+    std::cout << "Circle area = " << c.area() << std::endl;
     c.setRadius(100);
-    cout << "Rectangle area = " << c.area() << endl;
+    std::cout << "Rectangle area = " << c.area() << std::endl;
 
     return 0;
 }

@@ -9,9 +9,9 @@ class rectClass
     uint32_t l, w;
     static uint32_t rectCount;
 
-public:
+  public:
     /* The Object(Class) Constructors */
-    rectClass() // Empty Constructor
+    rectClass()   // Empty Constructor
     {
         this->l = 0;
         this->w = 0;
@@ -51,6 +51,11 @@ public:
         return this->w;
     }
 
+    uint32_t rectCounter()
+    {
+        return (this->rectCount - 1);   // note that the constructor of an class is called before even any instance is created so we have to substract one from the total number.
+    }
+
     rectClass operator+(rectClass x)
     {
         rectClass temp;
@@ -59,16 +64,15 @@ public:
         return temp;
     }
 
-    uint32_t rectCounter()
-    {
-        return this->rectCount;
-    }
-
     /* Friends */
     friend rectClass duplicate(rectClass x);
     friend class circleClass;
+
     /* The Object(Class) Destructor */
-    ~rectClass() {}
+    ~rectClass()
+    {
+        ;
+    }
 };
 
 /* Global variables */

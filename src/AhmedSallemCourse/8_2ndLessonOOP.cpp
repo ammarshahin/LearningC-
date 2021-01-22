@@ -2,7 +2,7 @@
 /**** 2. Static Keyword **********/
 
 #include <iostream>
-#include "../inc./rectClass.hpp"
+#include "../inc/rectClass.hpp"
 
 using namespace std;
 
