@@ -97,3 +97,40 @@ int main()
     int x = Calculator::add(5, 6);   // here we called the method without creating an object
 }
 
+//****************************************************************************************************************/
+//* 6- the explicit keyword is used to prevent the compiler from implicitly making the constructor with one argument
+//* for example
+class Foo
+{
+  public:
+    // single parameter constructor, can be used as an implicit conversion
+    // Foo(int foo)         // this will work
+    explicit Foo(int foo)   // this won't work because the Foo constructor is an explicit one
+        : m_foo(foo)
+    {
+    }
+
+    int GetFoo()
+    {
+        return m_foo;
+    }
+
+  private:
+    int m_foo;
+};
+
+//* Here's a simple function that takes a Foo object:
+void DoBar(Foo foo)
+{
+    // do stuff
+}
+
+//* and here's where the DoBar function is called:
+int main()
+{
+    DoBar(42);
+}
+
+
+//* 7- the operator overloading is always recommended to be prefix rather than postfix 
+//* for example
