@@ -25,7 +25,7 @@ class Shape
     }
 
     /* The Object(Class) Methods */
-    virtual double area() = 0;   // Now the Shape Class is an Abstact Class {We Can't make any objects from the Shape class}
+    virtual double area() = 0;   // (Overriding)Now the Shape Class is an Abstact Class {We Can't make any objects from the Shape class}
 
     void setLegnth(uint32_t l)
     {

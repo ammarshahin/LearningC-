@@ -1,6 +1,6 @@
 /* 1. 
 ** Namespace is a collection of data an functions and objects (a bag).
-** These collections can be accessed via accesses operator :: 
+** These collections can be accessed via accesses operator (or scope operator) :: 
 ** ex: */
 std::cout;   // it a good practice to set the namespace and the accesses operator rather than " using namespace "
 std::cin;
@@ -39,7 +39,7 @@ int elements[] = {1, 2, 3, 4, 5} for (int element : elements)   // for each loop
  * are functions that don't have a a specific name.
  * ex: 
  **/
-    auto sum_func = [](int x, int y) -> int {
+                 auto sum_func = [](int x, int y) -> int {
     return x + y;
 };
 

@@ -64,12 +64,12 @@ class RectClass : public Shape   // RectClass is now inherited the Shape attripu
     /* The Object(Class) Constructors */
     /* The child classes constructors must be on this form */
     RectClass()
-        : Shape()
+        : Shape()   //this maps the child constructor to the parent constructor
     {
     }   // Empty Constructor
 
     RectClass(uint32_t l, uint32_t w)
-        : Shape(l, w)
+        : Shape(l, w)   //this maps the child constructor to the parent constructor
     {
     }
 
