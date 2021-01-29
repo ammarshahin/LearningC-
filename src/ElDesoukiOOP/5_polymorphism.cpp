@@ -31,9 +31,14 @@ class Person
         std::cout << name << "  " << age << std::endl;
     }
 
-    // virtual void display() = 0;   // this way indicates that the display fuction in the parent class has no implementation and the parent class itself can't make any objects
+    //* Abstract class (can be inherited but can't make any objects)
+    //* Pure virtual function
+    //* This way indicates that the display fuction in the parent class has no implementation and the parent class itself can't make any objects
+    //* Note that now all the childs from this class has to implement this method (must override this method)
+    // virtual void display() = 0;
 
-    void name_set(std::string name)
+    //* the final keyword indcates that this method implementation is final and the method can't be overridden (c++11 extention)
+    virtual void name_set(std::string name) final
     {
         this->name = name;
     }
