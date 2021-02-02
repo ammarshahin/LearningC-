@@ -7,8 +7,8 @@
 ############################### Variables #######################################
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = 14_vectorSTL.o
-_EXC  = app.exe                  # The Excutable File name 
+_OBJ  = 1_intro.o
+_EXC  = app.exe                  # The Executable File name
 #################################################################################
  
 CXXC = g++
@@ -17,7 +17,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = .\inc
 ODIR = .\obj
-SDIR = .\src\AhmedSallemCourse
+SDIR = .\src\Multithreding
 
 LIBS = -lm
 
