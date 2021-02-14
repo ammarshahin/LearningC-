@@ -15,4 +15,8 @@ This repo is for Learning C++ and OOP
 <p>https://www.youtube.com/playlist?list=PL1DUmTEdeA6KLEvIO0NyrkT91BVle8BOU</p>
 
 # Books: 
-https://www.amazon.com/One-Hour-Sams-Teach-Yourself/dp/0789757745
+<h2>C++ in One Hour a Day :</h2>
+<p>https://www.amazon.com/One-Hour-Sams-Teach-Yourself/dp/0789757745</p>
+
+<h2>C++ Primer Plus :</h2>
+<p>https://www.amazon.com/Primer-Plus-6th-Developers-Library/dp/0321776402</p>
