@@ -4,7 +4,7 @@
 
 //* C++ also provides operators to help in decision making. Chapter 5 discusses the relational expressions, which compare two values.The if and if else statements typically use relational expressions as test conditions. By using C++’s logical operators (&&, ||, and !), you can combine or modify relational expressions to construct more elaborate tests.
 
-//* The conditional operator (Trinity operator) (?:) provides a compact way to choose from two values.
+//* The conditional operator (Ternary operator) (?:) provides a compact way to choose from two values.
 
 //* The cctype library of character functions provides a convenient and powerful set of tools for analyzing character input.
 
