@@ -41,7 +41,8 @@ size:                   			# rule to git stastics of the program
 
 git: clean                    # This rule is to automate aquick save to the VCS git 
 	@echo Saving...
-	@git commit -am "Quick Save" 
+	@git add .
+	@git commit -m "Quick Save" 
 
 run:
 	@echo running...
