@@ -41,7 +41,7 @@ size:                   			# rule to git stastics of the program
 
 git: clean                    # This rule is to automate aquick save to the VCS git 
 	@echo Saving...
-	git commit -am "Quick Save" 
+	@git commit -am "Quick Save" 
 
 run:
 	@echo running...
@@ -54,4 +54,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 
 clean:
 	@echo Cleaning...
-	rm -rf *.exe $(ODIR)/*.o
+	@rm -rf *.exe $(ODIR)/*.o
