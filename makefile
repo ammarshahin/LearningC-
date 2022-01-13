@@ -7,7 +7,7 @@
 ############################### Variables #######################################
 ######### change The Files Name here ########
 _DEPS =                          # The includes[.h and .hpp]
-_OBJ  = 1_intro.o
+_OBJ  = main.o
 _EXC  = app.exe                  # The Executable File name
 #################################################################################
  
@@ -16,8 +16,8 @@ CXXFLAGS = -I$(IDIR) -Wall
 CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = .\inc
-ODIR = .\obj
-SDIR = .\src\Multithreding
+ODIR = obj
+SDIR = .\src
 
 LIBS = -lm
 
@@ -27,7 +27,7 @@ OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 #******************************* Rules *******************************
-all: printStartMsg app size run
+all: printStartMsg app run
 	
 app: $(OBJ)
 	@$(CXXC) -o $@ $^ $(CXXFLAGS) $(LIBS)
@@ -35,14 +35,13 @@ app: $(OBJ)
 printStartMsg: 
 	@echo Building...
 
-size:                   #rule to git stastics of the program
-	@echo Program Statics:
+size:                   			# rule to git stastics of the program
+	@echo Statics:
 	@size $(_EXC)
 
-git:                    # This rule is to automate aquick save to the VCS git 
-	@echo Quick Saving...
-	git add .
-	git commit -m "Quick Save" 
+git: clean                    # This rule is to automate aquick save to the VCS git 
+	@echo Saving...
+	git commit -am "Quick Save" 
 
 run:
 	@echo running...
@@ -55,4 +54,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 
 clean:
 	@echo Cleaning...
-	rm -rf *.exe $(ODIR)./*.o
+	rm -rf *.exe $(ODIR)/*.o
