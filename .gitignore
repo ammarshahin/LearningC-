@@ -4,3 +4,4 @@ obj/*.o
 .idea/
 *.exe
 test.cpp
+*.out
