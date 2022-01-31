@@ -1,8 +1,11 @@
 #include <iostream>
 #include <cstdio>
+#include <cstdint>
+#include <vector>
+#include <cmath>
+#include <limits>
 
-int main(int argc, char const *argv[])
+int main()
 {
-    std::cout << "HelloWorld!!!" << std::endl;
     return 0;
 }

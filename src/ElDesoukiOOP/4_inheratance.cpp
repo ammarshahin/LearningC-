@@ -63,13 +63,13 @@ class Student : public Person
 
   public:
     Student()
-        : Person(), id(0)   //this maps the child constructor to the parent constructor
+        : Person(), id(0)   // this maps the child constructor to the parent constructor
     {
         ;
     }
 
     Student(std::string name, int age, int id)
-        : Person(name, age), id(id)   //this maps the child constructor to the parent constructor
+        : Person(name, age), id(id)   // this maps the child constructor to the parent constructor
     {
         ;
     }

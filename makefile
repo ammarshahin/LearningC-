@@ -16,7 +16,7 @@ CXXFLAGS = -I$(IDIR) -Wall
 CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = .\inc
-ODIR = obj
+ODIR = ./obj
 SDIR = .\src
 
 LIBS = -lm

@@ -5,21 +5,19 @@ CarClass::CarClass()
 {
     maker = "";
     model = 0;
-    std::cout << "called here" << std::endl;
 }
 
 CarClass::CarClass(std::string const mak, int mod)
 {
     maker = mak;
     model = mod;
-    std::cout << "called here" << std::endl;
 }
 
 CarClass::~CarClass()
 {
 }
 
-void CarClass::setMaker(std::string m)
+void CarClass::setMaker(const std::string m)
 {
     maker = m;
 }

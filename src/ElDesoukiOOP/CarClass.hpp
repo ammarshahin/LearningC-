@@ -6,8 +6,8 @@
 class CarClass
 {
   private:
-    std::string maker = "";
-    int model = 0;
+    std::string maker;
+    int model;
 
   public:
     CarClass();

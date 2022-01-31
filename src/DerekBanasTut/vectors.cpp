@@ -7,7 +7,7 @@
 int main()
 {
     // vectors are resizable arrays which can be extended and manipulated
-    //std::vector<type> _VectorName(VectorSize);
+    // std::vector<type> _VectorName(VectorSize);
     std::vector<int> vecRandNums(2);
     vecRandNums[0] = 10;
     vecRandNums[1] = 20;

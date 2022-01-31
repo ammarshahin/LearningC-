@@ -1,5 +1,4 @@
-//* the Polymorphism makes dynamic binding (Dynamic linkage) >> meaning it understands that the virtual method has been overridding and the child class now has it's own
-//* implementation of this method
+//* the Polymorphism makes dynamic binding (Dynamic linkage) >> meaning it understands that the virtual method has been overridding and the child class now has it's own implementation of this method
 //* without the virtual keywork the compiler will make early(static) binding to the method and will call the parent method always
 
 #include <iostream>
@@ -26,12 +25,12 @@ class Person
         ;
     }
 
-    virtual void display()   // the display fuction in the parent class is now a virtual method
+    virtual void display()   // is now a virtual method
     {
         std::cout << name << "  " << age << std::endl;
     }
 
-    //* Abstract class (can be inherited but can't make any objects)
+    //* Person is now an abstract class (can be inherited but can't make any objects)
     //* Pure virtual function
     //* This way indicates that the display fuction in the parent class has no implementation and the parent class itself can't make any objects
     //* Note that now all the childs from this class has to implement this method (must override this method)
@@ -74,13 +73,13 @@ class Student : public Person
 
   public:
     Student()
-        : Person(), id(0)   //this maps the child constructor to the parent constructor
+        : Person(), id(0)   // this maps the child constructor to the parent constructor
     {
         ;
     }
 
     Student(std::string name, int age, int id)
-        : Person(name, age), id(id)   //this maps the child constructor to the parent constructor
+        : Person(name, age), id(id)   // this maps the child constructor to the parent constructor
     {
         ;
     }
