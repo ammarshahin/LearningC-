@@ -1,7 +1,9 @@
 obj/*.o
+obj
 .vscode/
 .dist/
 .idea/
 *.exe
 test.cpp
 *.out
+app

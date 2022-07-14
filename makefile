@@ -12,7 +12,9 @@ _EXC  = ./app											# The Executable File name
 #################################################################################
  
 CXXC = g++
-CXXFLAGS = -I$(IDIR) -Wall
+CXXFLAGS := -I$(IDIR) 
+CXXFLAGS += -Wall
+CXXFLAGS += --std=c++11
 CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = ./inc
@@ -21,9 +23,7 @@ SDIR = ./src/Mastering4CriticalSkillsUsingC++17/section2/
 LIBS = -lm
 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
-
 OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
-
 
 #******************************* Rules *******************************
 all: printStartMsg app run
@@ -54,4 +54,4 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 
 clean:
 	@echo Cleaning...
-	@rm -rf *.exe $(ODIR)/*.o
+	@rm -rf *.exe $(ODIR)/*.o *.o *.out app
