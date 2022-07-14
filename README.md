@@ -12,6 +12,8 @@
 
 [El Desouki tutorial](https://www.youtube.com/playlist?list=PL1DUmTEdeA6KLEvIO0NyrkT91BVle8BOU)
 
+[Mastering 4 critical SKILLS using C++ 17](https://www.udemy.com/course/cpp-4skills/)
+
 ## Books: 
 [C++ in One Hour a Day](https://www.amazon.com/One-Hour-Sams-Teach-Yourself/dp/0789757745)
 
