@@ -19,7 +19,7 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = ./inc
 ODIR = ./obj
-SDIR = ./src/Mastering4CriticalSkillsUsingC++17/section2/
+SDIR = ./src/Mastering4CriticalSkillsUsingC++17/section3/
 LIBS = -lm
 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
