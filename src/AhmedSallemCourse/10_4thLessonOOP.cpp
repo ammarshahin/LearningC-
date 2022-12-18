@@ -12,7 +12,7 @@ class Shape
 
   public:
     /* The Object(Class) Constructors */
-    Shape()   // Empty Constructor(Defult Constructor)
+    Shape()   // Empty Constructor(Default Constructor)
     {
         this->l = 0;
         this->w = 0;
@@ -30,7 +30,7 @@ class Shape
         return (uint64_t)l * w;
     }
 
-    void setLegnth(uint32_t l)
+    void setLength(uint32_t l)
     {
         this->l = l;
     }
@@ -40,7 +40,7 @@ class Shape
         this->w = w;
     }
 
-    uint32_t getLegnth()
+    uint32_t getLength()
     {
         return this->l;
     }
@@ -58,18 +58,18 @@ class Shape
 };
 
 /**************** RectClass ******************/
-class RectClass : public Shape   // RectClass is now inherited the Shape attriputes (l & w)
+class RectClass : public Shape   // RectClass is now inherited the Shape attributes (l & w)
 {
   public:
     /* The Object(Class) Constructors */
     /* The child classes constructors must be on this form */
     RectClass()
-        : Shape()   //this maps the child constructor to the parent constructor
+        : Shape()   //this maps the child default constructor to the parent default constructor
     {
     }   // Empty Constructor
 
     RectClass(uint32_t l, uint32_t w)
-        : Shape(l, w)   //this maps the child constructor to the parent constructor
+        : Shape(l, w)   //this maps the child specific constructor to the parent specific constructor
     {
     }
 
@@ -118,7 +118,7 @@ int main()
     cout << "Rectangle area = " << rp->area() << endl;
 
     Shape *tp = &t;                                     // tp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
-    cout << "Triangle area = " << tp->area() << endl;   // Note that tp is accessing the area method in the Shape Class..NOT the one in TriClass ... this problem is solved by a virtual methodes
+    cout << "Triangle area = " << tp->area() << endl;   // Note that tp is accessing the area method in the Shape Class..NOT the one in TriClass ... this problem is solved by a virtual methods
 
     return 0;
 }

@@ -31,7 +31,7 @@ class rectClass
         return (uint64_t)l * w;
     }
 
-    void changeLegnth(uint32_t l)
+    void changeLength(uint32_t l)
     {
         this->l = l;
     }
@@ -41,7 +41,7 @@ class rectClass
         this->w = w;
     }
 
-    uint32_t legnth()
+    uint32_t length()
     {
         return this->l;
     }
@@ -53,7 +53,7 @@ class rectClass
 
     uint32_t rectCounter()
     {
-        return (this->rectCount - 1);   // note that the constructor of an class is called before even any instance is created so we have to substract one from the total number.
+        return (this->rectCount - 1);   // note that the constructor of an class is called before even any instance is created so we have to subtract one from the total number.
     }
 
     rectClass operator+(rectClass x)

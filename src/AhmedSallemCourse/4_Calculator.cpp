@@ -5,12 +5,11 @@ using namespace std;
 int main()
 {
     signed int x, y;
-    signed long long result;
     unsigned char opcode, againCondition;
 
     while (1)
     {
-        result = 1;
+        signed long long result = 1;
         cout << "Enter the Operation and the Operands [ex  : x+y] : ";
         cin >> x >> opcode >> y;
 

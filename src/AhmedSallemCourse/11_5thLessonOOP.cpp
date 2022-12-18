@@ -12,7 +12,7 @@ class Shape
 
   public:
     /* The Object(Class) Constructors */
-    Shape()   // Empty Constructor(Defult Constructor)
+    Shape()   // Empty Constructor(default Constructor)
     {
         this->l = 0;
         this->w = 0;
@@ -25,9 +25,9 @@ class Shape
     }
 
     /* The Object(Class) Methods */
-    virtual double area() = 0;   // (Overriding)Now the Shape Class is an Abstact Class {We Can't make any objects from the Shape class}
+    virtual double area() = 0;   // (Overriding)Now the Shape Class is an Abstract Class {We Can't make any objects from the Shape class}
 
-    void setLegnth(uint32_t l)
+    void setLength(uint32_t l)
     {
         this->l = l;
     }
@@ -37,7 +37,7 @@ class Shape
         this->w = w;
     }
 
-    uint32_t getLegnth()
+    uint32_t getLength()
     {
         return this->l;
     }
@@ -54,7 +54,7 @@ class Shape
 };
 
 /**************** RectClass ******************/
-class RectClass : public Shape   // RectClass is now inherited the Shape attriputes (l & w)
+class RectClass : public Shape   // RectClass is now inherited the Shape attributes (l & w)
 {
   public:
     /* The Object(Class) Constructors */

@@ -1,13 +1,13 @@
 /**** 1. Defining a Class **********/
-/**** 2. Decalring a Class **********/
-/**** 3. Diffrance between public, private, and protected **********/
+/**** 2. Declaring a Class **********/
+/**** 3. Declaring between public, private, and protected **********/
 /**** 4. This keyword and it's uses in access mechanism **********/
 #include <iostream>
 
 class Rect
 {
     /* The Object(Class) Data */
-    uint32_t l, w;   // defult private elements
+    uint32_t l, w;   // default private elements
 
   public:
     /* The Object(Class) Constructor */

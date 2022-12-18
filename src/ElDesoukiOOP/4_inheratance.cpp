@@ -15,7 +15,7 @@ class Person
         ;
     }
 
-    Person(std::string name, int age)
+    Person(const std::string &name, int age)
         : name(name),
           age(age)
     {
@@ -27,7 +27,7 @@ class Person
         std::cout << name << "  " << age << std::endl;
     }
 
-    void name_set(std::string name)
+    void name_set(const std::string &name)
     {
         this->name = name;
     }
@@ -68,13 +68,13 @@ class Student : public Person
         ;
     }
 
-    Student(std::string name, int age, int id)
+    Student(const std::string &name, int age, int id)
         : Person(name, age), id(id)   // this maps the child constructor to the parent constructor
     {
         ;
     }
 
-    void display()   // this method is now overriding the parent mehtod and called istead
+    void display()   // this method is now overriding the parent method and called instead
     {
         std::cout << name << "  " << age << "  " << id << std::endl;
         Person::display();   // this will call the base class method

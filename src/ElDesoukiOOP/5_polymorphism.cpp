@@ -1,5 +1,5 @@
-//* the Polymorphism makes dynamic binding (Dynamic linkage) >> meaning it understands that the virtual method has been overridding and the child class now has it's own implementation of this method
-//* without the virtual keywork the compiler will make early(static) binding to the method and will call the parent method always
+//* the Polymorphism makes dynamic binding (Dynamic linkage) >> meaning it understands that the virtual method has been overriding and the child class now has it's own implementation of this method
+//* without the virtual keyword the compiler will make early(static) binding to the method and will call the parent method always
 
 #include <iostream>
 #include <stdint-gcc.h>
@@ -18,7 +18,7 @@ class Person
         ;
     }
 
-    Person(std::string name, int age)
+    Person(const std::string &name, int age)
         : name(name),
           age(age)
     {
@@ -36,7 +36,7 @@ class Person
     //* Note that now all the childs from this class has to implement this method (must override this method)
     // virtual void display() = 0;
 
-    //* the final keyword indcates that this method implementation is final and the method can't be overridden (c++11 extention)
+    //* the final keyword indicates that this method implementation is final and the method can't be overridden (c++11 extention)
     virtual void name_set(std::string name) final
     {
         this->name = name;
@@ -78,13 +78,13 @@ class Student : public Person
         ;
     }
 
-    Student(std::string name, int age, int id)
+    Student(const std::string &name, int age, int id)
         : Person(name, age), id(id)   // this maps the child constructor to the parent constructor
     {
         ;
     }
 
-    void display()   // this method is now overriding the parent mehtod and called istead
+    void display()   // this method is now overriding the parent method and called instead
     {
         std::cout << name << "  " << age << "  " << id << std::endl;
     }
@@ -101,10 +101,10 @@ int main(int argc, const char **argv)
     s1.display();   // We are know calling the local display method
 
     /* "new" is an operator that creates an object */
-    Person *s2 = new Student("ammar", 25, 10);   // sp is a Pointer that points to Person Class or any Child of it (Polymorphism)
+    Person *s2 = new Student("ammar", 25, 10);   // s2 is a Pointer that points to Person Class or any Child of it (Polymorphism)
     s2->display();                               // We are know calling the local display method
 
-    Person *s3 = new Person("Fatma", 22);
+    Person *s3 = new Person("Fatma", 22);   // s3 is a Pointer that points to Person Class or any Child of it (Polymorphism)
 
     s3->display();
 

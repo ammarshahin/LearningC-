@@ -8,7 +8,7 @@ rectClass duplicate(rectClass x)
 {
     rectClass c;
     /*  1. Using Methods  */
-    //c.changeLegnth(x.legnth());
+    //c.changeLength(x.length());
     //c.changeWidth(x.width());
 
     /* 2. Operator overloading for '=' */

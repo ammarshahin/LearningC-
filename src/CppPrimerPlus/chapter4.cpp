@@ -80,7 +80,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-//! Ex: anynomnous union
+//! Ex: anonymous union
 //*
 struct widget
 {
