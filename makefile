@@ -7,7 +7,7 @@
 ############################### Variables #######################################
 ######### change The Files Name here ########
 _DEPS =														# The includes[.h and .hpp]
-_OBJ  = main.o										# The ${file_name}.o
+_OBJ  = map.o										# The ${file_name}.o
 _EXC  = ./app											# The Executable File name
 #################################################################################
  
@@ -19,14 +19,14 @@ CXX_DEBUG_FLAGS = -I$(IDIR) -Wall -0
 
 IDIR = ./inc
 ODIR = ./obj
-SDIR = ./src/Mastering4CriticalSkillsUsingC++17/section3/
+SDIR = ./src/Mastering4CriticalSkillsUsingC++17/STLs/
 LIBS = -lm
 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 #******************************* Rules *******************************
-all: printStartMsg app run
+all: clean printStartMsg app run
 	
 app: $(OBJ)
 	@$(CXXC) -o $@ $^ $(CXXFLAGS) $(LIBS)
