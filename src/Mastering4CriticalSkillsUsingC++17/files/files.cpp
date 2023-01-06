@@ -75,9 +75,18 @@ void string_stream()
 
 int main(int argc, char const *argv[])
 {
-    read_stream();
-    write_stream();
-    readAndWriteToFile();
-    string_stream();
+    // read_stream();
+    // write_stream();
+    // readAndWriteToFile();
+    // string_stream();
+
+    vector<int> v{1, 2, 3, 8, 4, 5};
+    vector<int> v2{1, 2, 3, 8, 4, 5};
+    int count = count_if(v.begin(), v.end(), [&v](int x) -> bool {
+        v[0] = 2;
+        return x % 2 == 0;
+    });
+
+    cout << count;
     return 0;
 }
