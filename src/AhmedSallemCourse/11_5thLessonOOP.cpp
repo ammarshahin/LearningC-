@@ -69,7 +69,7 @@ class RectClass : public Shape   // RectClass is now inherited the Shape attribu
     }
 
     /* The Object(Class) Methods */
-    double area()
+    double area() override   // Overriding [This method will override the inherited area method]
     {
         return (double)this->l * this->w;
     }
@@ -96,7 +96,7 @@ class TriClass : public Shape
     }
 
     /* The Object(Class) Methods */
-    double area()   // Overriding [This method will override the inherited area method]
+    double area() override   // Overriding [This method will override the inherited area method]
     {
         return (double)0.5 * this->l * this->w;
     }
