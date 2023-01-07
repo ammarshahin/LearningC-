@@ -58,4 +58,4 @@ struct employee
 //! can use this syntax to initialize
 
 int arr[]{20, 10, 20, 30, 7, 0};
-unordered_set<int> s(arr, arr + 3);
+unordered_set<int> s2(arr, arr + 3);
