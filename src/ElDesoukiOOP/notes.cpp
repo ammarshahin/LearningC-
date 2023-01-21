@@ -131,6 +131,5 @@ int main()
     DoBar(42);
 }
 
-
-//* 7- the operator overloading is always recommended to be prefix rather than postfix 
+//* 7- the operator overloading is always recommended to be prefix rather than postfix
 //* for example

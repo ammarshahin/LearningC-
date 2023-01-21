@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-//! tuple any number on arguments
+//! tuple takes any number on arguments
 //! the use of get<element_position>(tuple name) to get and set elements value
 //! check the new C++17 tuple syntax
 //! the tie function is used to break any struture to it's building blocks

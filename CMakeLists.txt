@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # GoogleTest requires at least C++14
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 # Set the project name
 project (LearningCpp)
@@ -24,6 +24,7 @@ enable_testing()
 # Add an executable
 add_executable(unique_pointer src/Advanced/SmartPointers/unique_pointer.cpp)
 add_executable(lambda src/Advanced/Lambda/Lambda.cpp)
+add_executable(optional src/Advanced/optional/main.cpp)
 add_executable(lambda_test src/tests/Advanced/lambda_test.cpp)
 
 target_link_libraries(
