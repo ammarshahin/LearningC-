@@ -1,9 +1,12 @@
 obj/*.o
 obj
-.vscode/
-.dist/
-.idea/
+.vscode
+.vs
+.dist
+.idea
 *.exe
 test.cpp
 *.out
 app
+build
+CppProperties.json
