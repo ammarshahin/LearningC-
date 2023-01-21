@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-#include "../../Advanced/Lambda/lambda.hpp"
 
 // Demonstrate some basic assertions.
 TEST(HelloTest, BasicAssertions)
