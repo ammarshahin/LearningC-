@@ -41,6 +41,27 @@ int main(int argc, char const *argv[])
     auto lambda6 = [](int value) -> bool { return value > 3; };   // this take only specific variables from the outside of the outer scope as a Reference (effects the original variable)
 
     auto it = find_if(v.begin(), v.end(), lambda6);
-    cout << *it;
+    // cout << *it;
+
+    //! for each usage
+    for_each(v.begin(), v.end(), [](int x) {
+        cout << " " << x;
+    });
+
     return 0;
 }
+
+//* for the capture closure
+// [] >> No Capture
+// [=] >> Capture All by value
+// [&] >> Capture All by reference
+// [x] >> Capture x by value (Can't change it's value inside the lambda function)
+// [x] () mutable {} >> Capture x by value (Can change it's value inside the lambda function)
+// [&x] >> Capture x by reference
+// [&,x] >> Capture x by value, everything else by ref
+// [=,&x] >> Capture x by ref, everything else by value
+
+//* The following are all the same implementation (Lambda expresion can deduce the return type of the function by itself)
+auto lambda_1 = [](void) -> void { cout << "Hello World!!" << endl; };
+auto lambda_2 = [](void) { cout << "Hello World!!" << endl; };
+auto lambda_3 = [] { cout << "Hello World!!" << endl; };
