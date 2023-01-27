@@ -24,6 +24,7 @@ enable_testing()
 # Add an executable
 add_executable(app src/main.cpp)
 add_executable(namespace src/Mastering4CriticalSkillsUsingC++17/namespaces/namespace.cpp)
+add_executable(structures src/Mastering4CriticalSkillsUsingC++17/structures/structures_inheritance.cpp)
 add_executable(exception src/Mastering4CriticalSkillsUsingC++17/exceptions/exceptions.cpp)
 add_executable(noexcept src/Mastering4CriticalSkillsUsingC++17/exceptions/noexcept.cpp)
 add_executable(unique_pointer src/Advanced/SmartPointers/unique_pointer.cpp)
