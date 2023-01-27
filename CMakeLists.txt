@@ -23,6 +23,8 @@ enable_testing()
 
 # Add an executable
 add_executable(app src/main.cpp)
+add_executable(namespace src/Mastering4CriticalSkillsUsingC++17/namespaces/namespace.cpp)
+add_executable(exception src/Mastering4CriticalSkillsUsingC++17/exceptions/exceptions.cpp)
 add_executable(unique_pointer src/Advanced/SmartPointers/unique_pointer.cpp)
 add_executable(mutex src/Multithreding/mutex.cpp)
 add_executable(future src/Multithreding/future.cpp)
