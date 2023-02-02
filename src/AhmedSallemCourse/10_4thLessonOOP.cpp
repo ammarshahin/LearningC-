@@ -8,7 +8,7 @@ class Shape
 {
   protected:   // meaning it's private to be accessed out of the class but can be inherited
     /* The Object(Class) Data */
-    uint32_t l, w;
+    double l, w;
 
   public:
     /* The Object(Class) Constructors */
@@ -18,34 +18,34 @@ class Shape
         this->w = 0;
     }
 
-    Shape(uint32_t l, uint32_t w)
+    Shape(double l, double w)
     {
         this->l = l;
         this->w = w;
     }
 
     /* The Object(Class) Methods */
-    uint64_t area()
+    virtual double area()
     {
-        return (uint64_t)l * w;
+        return (double)l * w;
     }
 
-    void setLength(uint32_t l)
+    void setLength(double l)
     {
         this->l = l;
     }
 
-    void setWidth(uint32_t w)
+    void setWidth(double w)
     {
         this->w = w;
     }
 
-    uint32_t getLength()
+    double getLength()
     {
         return this->l;
     }
 
-    uint32_t getWidth()
+    double getWidth()
     {
         return this->w;
     }
@@ -64,12 +64,12 @@ class RectClass : public Shape   // RectClass is now inherited the Shape attribu
     /* The Object(Class) Constructors */
     /* The child classes constructors must be on this form */
     RectClass()
-        : Shape()   //this maps the child default constructor to the parent default constructor
+        : Shape()   // this maps the child default constructor to the parent default constructor
     {
     }   // Empty Constructor
 
-    RectClass(uint32_t l, uint32_t w)
-        : Shape(l, w)   //this maps the child specific constructor to the parent specific constructor
+    RectClass(double l, double w)
+        : Shape(l, w)   // this maps the child specific constructor to the parent specific constructor
     {
     }
 
@@ -89,13 +89,13 @@ class TriClass : public Shape
     {
     }   // Empty Constructor
 
-    TriClass(uint32_t l, uint32_t w)
+    TriClass(double l, double w)
         : Shape(l, w)
     {
     }
 
     /* The Object(Class) Methods */
-    double area()   // Overriding [This method will override the inherited area method]
+    double area() override   // Overriding [This method will override the inherited area method]
     {
         return (double)0.5 * this->l * this->w;
     }
