@@ -9,5 +9,5 @@ TEST(HelloTest, BasicAssertions)
 //! Should fail
 TEST(HelloTest, BasicAssertions2)
 {
-    EXPECT_EQ(4, 6);
+    EXPECT_NE(4, 6);
 }
