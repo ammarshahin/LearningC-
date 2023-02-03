@@ -24,7 +24,7 @@ jobs:
       run: cmake -G "Unix Makefiles" . -B build
     
     - name: get into build dir 
-      run: cd build
+      run: cd .\build\
     
     - name: make check
       run: cmake --build .
