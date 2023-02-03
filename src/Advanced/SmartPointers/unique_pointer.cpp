@@ -1,5 +1,8 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <memory>
+
+namespace SmartPointers
+{
 
 template <class _Ty>
 class _unique_ptr
@@ -29,7 +32,7 @@ class _unique_ptr
 
     ~_unique_ptr()
     {
-        cout << "Called the deconstructor\n";
+        std::cout << "Called the deconstructor\n";
         delete[] ptr;
     }
 
@@ -37,24 +40,31 @@ class _unique_ptr
     _unique_ptr operator=(_unique_ptr &p) = delete;
 };
 
-int main(int argc, char const *argv[])
+void run(void)
 {
     //!  OLD COMPLEX WAY
     int *ptr = new int(4);
-    cout << *ptr << endl;
+    std::cout << *ptr << std::endl;
     delete ptr;
 
     //* New Way
-    unique_ptr<int> u_ptr(new int(5));
-    cout << *u_ptr << endl;
+    std::unique_ptr<int> u_ptr(new int(5));
+    std::cout << *u_ptr << std::endl;
+
+    {
+        //* How to move ownership of a unique pointer
+        std::unique_ptr<int> new_ptr(std::move(u_ptr));
+        std::cout << *new_ptr << std::endl;
+    }   //* new_ptr is now deleted
 
     //* Better way
-    unique_ptr<int> n_ptr = make_unique<int>(4);
-    cout << *n_ptr << endl;
+    std::unique_ptr<int>
+        n_ptr = std::make_unique<int>(4);
+    std::cout << *n_ptr << std::endl;
 
     //* My Implementation
     _unique_ptr<int> o_ptr(new int(8));
-    cout << *o_ptr << endl;
-
-    return 0;
+    std::cout << *o_ptr << std::endl;
 }
+
+}   // namespace SmartPointers

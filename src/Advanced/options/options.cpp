@@ -2,8 +2,10 @@
 
 #include <bits/stdc++.h>
 #include <optional>
-
 using namespace std;
+
+namespace options
+{
 
 //! First way
 optional<bool> is_ammar(const string &user)
@@ -23,7 +25,7 @@ optional<bool> is_shahin(const string &user)
     return op;
 }
 
-int main(int argc, char const *argv[])
+void run(void)
 {
     string user = "ammar3";
     if (is_ammar(user))
@@ -39,5 +41,6 @@ int main(int argc, char const *argv[])
         cout << "is shahin    " << ret.value() << endl;   // .value() to get the value inside
     else
         cout << "not shahin" << endl;
-    return 0;
 }
+
+}   // namespace options

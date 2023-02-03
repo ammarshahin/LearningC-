@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+namespace lambda
+{
+
 void printVector(const vector<int> &v, const function<void(int)> func)
 {
     cout << "Vector : ";
@@ -10,7 +13,7 @@ void printVector(const vector<int> &v, const function<void(int)> func)
     cout << endl;
 }
 
-int main(int argc, char const *argv[])
+void run(void)
 {
     vector<int> v{1, 2, 3, 4, 5};
     // printVector(v, [](int value) { cout << value << " "; });
@@ -47,8 +50,6 @@ int main(int argc, char const *argv[])
     for_each(v.begin(), v.end(), [](int x) {
         cout << " " << x;
     });
-
-    return 0;
 }
 
 //* for the capture closure
@@ -65,3 +66,5 @@ int main(int argc, char const *argv[])
 auto lambda_1 = [](void) -> void { cout << "Hello World!!" << endl; };
 auto lambda_2 = [](void) { cout << "Hello World!!" << endl; };
 auto lambda_3 = [] { cout << "Hello World!!" << endl; };
+
+}   // namespace lambda
