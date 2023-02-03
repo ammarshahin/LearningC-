@@ -4,8 +4,8 @@
 
 int main()
 {
-    // lambda::run();
+    lambda::run();
     // options::run();
-    SmartPointers::run();
+    // SmartPointers::run();
     return 0;
 }
