@@ -27,7 +27,4 @@ jobs:
       run: cd build; ls --all
     
     - name: make check
-      run: cmake --build .
-    
-    # - name: make distcheck
-    #   run: make distcheck
+      run: make
