@@ -22,6 +22,8 @@ jobs:
     
     - name: configure CMake
       run: cmake -G "MinGW Makefiles" . -B build
+    
+    - name: get into build dir 
       run: cd build
     
     - name: make check
