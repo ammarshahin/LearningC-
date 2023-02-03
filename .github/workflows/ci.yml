@@ -21,7 +21,7 @@ jobs:
     #   run: cd build
     
     - name: configure CMake
-      run: cmake -G "MinGW Makefiles" . -B build
+      run: cmake -G "Unix Makefiles" . -B build
     
     - name: get into build dir 
       run: cd build
