@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdint-gcc.h>
 
-enum class DateFormat
+enum class [[nodiscard]] DateFormat
 {
     D_M_Y,
     M_Y,
@@ -21,6 +21,7 @@ struct Date
     Date();
     Date(uint16_t day, uint16_t month, uint16_t year);
     void setPrintFormat(DateFormat printFmt);
+    DateFormat getPrintFormat();
     void printDate();
     ~Date() = default;
 };
@@ -38,6 +39,11 @@ Date::Date(uint16_t _day, uint16_t _month, uint16_t _year)
 void Date::setPrintFormat(DateFormat printFmt)
 {
     this->printFormat = printFmt;
+}
+
+DateFormat Date::getPrintFormat()
+{
+    return this->printFormat;
 }
 
 void Date::printDate()
@@ -69,5 +75,7 @@ int main(int argc, char const *argv[])
     Date today{1, 2, 2023};
     today.setPrintFormat(DateFormat::D_M);
     today.printDate();
+    // today.getPrintFormat(); // This will generate an error due to the [[nodiscard]]
+    auto x = today.getPrintFormat();   // This will not
     return 0;
 }

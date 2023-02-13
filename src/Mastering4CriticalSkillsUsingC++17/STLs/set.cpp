@@ -7,7 +7,7 @@ using namespace std;
 void print(const set<string> &s)
 {
     cout << "s:";
-    for (auto &val : s)
+    for (const auto &val : s)
         cout << " " << val;
     cout << endl;
 }

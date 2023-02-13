@@ -7,7 +7,7 @@ using namespace std;
 void print(const map<string, int> &m)
 {
     cout << "m:";
-    for (auto &val : m)   //* Val is a pair<const string, int>
+    for (const auto &val : m)   //* Val is a pair<const string, int>
         cout << "{" << val.first << "," << val.second << "},";
     cout << endl;
 }

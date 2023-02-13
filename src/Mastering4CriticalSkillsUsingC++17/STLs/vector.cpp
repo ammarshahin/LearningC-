@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
     v.push_back(6);
 
     cout << "v: ";
-    for (auto &val : v2)
+    for (const auto &val : v2)
         cout << val << " ";
 
     return 0;

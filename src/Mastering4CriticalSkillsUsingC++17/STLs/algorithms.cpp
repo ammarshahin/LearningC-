@@ -7,7 +7,7 @@ using namespace std;
 void print(const vector<int> &v)
 {
     cout << "v :";
-    for (auto &val : v)
+    for (const auto &val : v)
         cout << " " << val;
 
     cout << endl;
