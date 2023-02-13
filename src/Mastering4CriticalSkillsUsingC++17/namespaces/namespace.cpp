@@ -4,23 +4,24 @@
 
 namespace MyTools
 {
-int tools_number = 1;
-int sum(int x, int y)
-{
-    return x + y;
-}
-}   // namespace MyTools
+	int tools_number = 1;
+	
+	int sum(int x, int y)
+	{
+		return x + y;
+	}
+}// namespace MyTools
 
 //! We can break the namespaces in chunks and define sum in different files
 namespace MyTools
 {
-namespace Mult   //! namespace inside another
-{
-int mult(int x, int y)
-{
-    return x * y;
-}
-}   // namespace Mult
+	namespace Mult   //! namespace inside another namespace
+	{
+		int mult(int x, int y)
+		{
+			return x * y;
+		}
+	}   // namespace Mult
 }   // namespace MyTools
 
 int main(int argc, char const *argv[])
