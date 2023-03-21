@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 # GoogleTest requires at least C++17
 set(CMAKE_CXX_STANDARD 17)
+add_compile_options(-Wall -Wextra -Wpedantic)
 
 # Set the project name
 project (LearningCpp)
@@ -34,8 +35,6 @@ target_include_directories(
 	PUBLIC src/Advanced/options
 	PUBLIC src/Advanced/SmartPointers
 	)
-
-
 
 
 ##! Gtest

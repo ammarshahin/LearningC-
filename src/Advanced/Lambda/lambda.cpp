@@ -50,6 +50,8 @@ void run(void)
     for_each(v.begin(), v.end(), [](int x) {
         cout << " " << x;
     });
+
+    cout << '\n';
 }
 
 //* for the capture closure
