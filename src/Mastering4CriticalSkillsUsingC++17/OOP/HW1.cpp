@@ -1,14 +1,13 @@
 #include <iostream>
 #include <stdint-gcc.h>
 
-enum class [[nodiscard]] DateFormat
+enum [[nodiscard]] DateFormat
 {
     D_M_Y,
     M_Y,
     D_M,
     M_D_Y
 };
-
 struct Date
 {
   private:
@@ -70,12 +69,11 @@ void Date::printDate()
     }
 }
 
-int main(int argc, char const *argv[])
+void HW1(void)
 {
     Date today{1, 2, 2023};
     today.setPrintFormat(DateFormat::D_M);
     today.printDate();
     // today.getPrintFormat(); // This will generate an error due to the [[nodiscard]]
-    auto x = today.getPrintFormat();   // This will not
-    return 0;
+    auto x = today.getPrintFormat();   // This will not generate an error
 }

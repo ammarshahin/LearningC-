@@ -11,10 +11,10 @@ project (LearningCpp)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Advanced/Lambda)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Advanced/options)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Advanced/SmartPointers)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/Mastering4CriticalSkillsUsingC++17/OOP)
 
 # Add executables
 add_executable(app src/main.cpp)
-add_executable(HomeWork1 src/Mastering4CriticalSkillsUsingC++17/OOP/HomeWork1.cpp)
 add_executable(namespace src/Mastering4CriticalSkillsUsingC++17/namespaces/namespace.cpp)
 add_executable(structures src/Mastering4CriticalSkillsUsingC++17/structures/structures_inheritance.cpp)
 add_executable(exception src/Mastering4CriticalSkillsUsingC++17/exceptions/exceptions.cpp)
@@ -27,6 +27,7 @@ target_link_libraries(
   PUBLIC lambda
   PUBLIC options
 	PUBLIC SmartPointers
+	PUBLIC oop
 	)
 	
 target_include_directories(
@@ -34,6 +35,7 @@ target_include_directories(
 	PUBLIC src/Advanced/Lambda
 	PUBLIC src/Advanced/options
 	PUBLIC src/Advanced/SmartPointers
+	PUBLIC src/Mastering4CriticalSkillsUsingC++17/OOP
 	)
 
 
