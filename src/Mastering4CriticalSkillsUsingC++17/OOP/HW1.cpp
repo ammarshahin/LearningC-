@@ -1,7 +1,9 @@
 #include <iostream>
 #include <stdint-gcc.h>
+#include <chrono>
+#include <ctime>
 
-enum [[nodiscard]] DateFormat
+enum class [[nodiscard]] DateFormat
 {
     D_M_Y,
     M_Y,
@@ -71,9 +73,10 @@ void Date::printDate()
 
 void HW1(void)
 {
-    Date today{1, 2, 2023};
+    std::time_t t = std::time(0);   // get time now
+    std::tm *now = std::localtime(&t);
+    Date today{now->tm_mday, now->tm_mon + 1, now->tm_year + 1900};
     today.setPrintFormat(DateFormat::D_M);
     today.printDate();
-    // today.getPrintFormat(); // This will generate an error due to the [[nodiscard]]
-    auto x = today.getPrintFormat();   // This will not generate an error
+    auto x = today.getPrintFormat();
 }
