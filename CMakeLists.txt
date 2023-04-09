@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.5)
 # GoogleTest requires at least C++17
 set(CMAKE_CXX_STANDARD 17)
 add_compile_options(-Wall -Wextra -Wpedantic)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
 
 # Set the project name
 project (LearningCpp)
@@ -58,5 +60,5 @@ target_link_libraries(
 	lambda_test
 	GTest::gtest_main
 	)
-	include(GoogleTest)
-	gtest_discover_tests(lambda_test)
+include(GoogleTest)
+gtest_discover_tests(lambda_test)
