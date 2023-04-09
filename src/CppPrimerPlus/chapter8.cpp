@@ -171,7 +171,7 @@ int main(void)
 
 //* Phase 3—Determine whether there is a best viable function. If so, you use that function.Otherwise, the function call is an error.
 
-//FIXME: The rest of the Chapter is pretty advanced stuff That can be read later.
+// FIXME: The rest of the Chapter is pretty advanced stuff That can be read later.
 
 //! What’s That Type?
 //! The decltype Keyword (C++11)
