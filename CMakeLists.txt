@@ -9,6 +9,7 @@ project (LearningCpp)
 
 # Add libs 
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Advanced/Lambda)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/EffectiveC++)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Advanced/options)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Advanced/SmartPointers)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/Mastering4CriticalSkillsUsingC++17/OOP)
@@ -28,6 +29,7 @@ target_link_libraries(
   PUBLIC options
 	PUBLIC SmartPointers
 	PUBLIC oop
+	PUBLIC EffectiveCpp
 	)
 	
 target_include_directories(
@@ -36,6 +38,7 @@ target_include_directories(
 	PUBLIC src/Advanced/options
 	PUBLIC src/Advanced/SmartPointers
 	PUBLIC src/Mastering4CriticalSkillsUsingC++17/OOP
+	PUBLIC src/EffectiveC++
 	)
 
 
