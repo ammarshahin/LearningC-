@@ -1,15 +1,15 @@
 /**** 1. Friend **********/
 
 #include <iostream>
-#include "../inc/rectClass.hpp"
-#include "../inc/circleClass.hpp"
+#include "rectClass.hpp"
+#include "circleClass.hpp"
 
 rectClass duplicate(rectClass x)
 {
     rectClass c;
     /*  1. Using Methods  */
-    //c.changeLength(x.length());
-    //c.changeWidth(x.width());
+    // c.changeLength(x.length());
+    // c.changeWidth(x.width());
 
     /* 2. Operator overloading for '=' */
     // c = x;

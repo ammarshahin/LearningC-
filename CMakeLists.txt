@@ -36,6 +36,7 @@ target_link_libraries(
 	
 target_include_directories(
 	app
+	PUBLIC inc
 	PUBLIC src/Advanced/Lambda
 	PUBLIC src/Advanced/options
 	PUBLIC src/Advanced/SmartPointers

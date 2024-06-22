@@ -27,7 +27,8 @@ class Shape
     /* The Object(Class) Methods */
     virtual double area()
     {
-        return (double)l * w;
+        cout << "Shape area method" << endl;
+        return l * w;
     }
 
     void setLength(double l)
@@ -53,7 +54,6 @@ class Shape
     /* The Object(Class) Destructor */
     ~Shape()
     {
-        ;
     }
 };
 
@@ -97,6 +97,7 @@ class TriClass : public Shape
     /* The Object(Class) Methods */
     double area() override   // Overriding [This method will override the inherited area method]
     {
+        cout << "Triangle area method" << endl;
         return (double)0.5 * this->l * this->w;
     }
 
@@ -117,7 +118,7 @@ int main()
     Shape *rp = &r;   // rp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
     cout << "Rectangle area = " << rp->area() << endl;
 
-    Shape *tp = &t;                                     // tp is a Pointer that points to Shape Class or any Child of it (Polymorphism)
+    Shape *tp = &t;
     cout << "Triangle area = " << tp->area() << endl;   // Note that tp is accessing the area method in the Shape Class..NOT the one in TriClass ... this problem is solved by a virtual methods
 
     return 0;

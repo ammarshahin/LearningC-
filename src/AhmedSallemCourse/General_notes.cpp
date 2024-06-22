@@ -37,9 +37,7 @@ for (int element : elements)
         << element << std::endl;
 
 /**
- * 7. Lambda functions in C++11 >> pointer to generic function
- * are functions that don't have a a specific name.
- * ex:
+ * 7. Lambda functions in C++11 >> pointer to generic function are functions that don't have a a specific name.
  **/
 auto sum_func = [](int x, int y) -> int {
     return x + y;

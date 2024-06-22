@@ -50,7 +50,7 @@ class Circle
     /* The Object(Class) Constructor */
     Circle();   // Empty Constructor
 
-    Circle(double r)
+    explicit Circle(double r)
     {
         this->r = r;
     }

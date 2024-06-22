@@ -14,7 +14,7 @@ class Test
         this->b = b;
     }
 
-    R divfunc()   // Template function
+    R divFunc()   // Template function
     {
         cout << "n = " << n << endl;
         return (R)this->a / this->b;
@@ -24,6 +24,6 @@ class Test
 int main()
 {
     Test<double, int, 6> clT(10, 2.1);   // Replace the R template with double, Replace the T template with int, and set variable n to 6
-    cout << "The g = " << clT.divfunc() << endl;
+    cout << "The g = " << clT.divFunc() << endl;
     return 0;
 }
